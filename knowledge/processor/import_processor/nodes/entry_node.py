@@ -40,8 +40,10 @@ class EntryNode(BaseNode):
         # 5. 获取文件的后缀
         if import_file_path_obj.suffix == '.pdf':
             state['is_pdf_read_enabled'] = True
+            state['pdf_path'] = str(import_file_path_obj)
         elif import_file_path_obj.suffix == '.md':
             state['is_md_read_enabled'] = True
+            state['md_path'] = str(import_file_path_obj)
         else:
             self.logger.error(f"该文件后缀格式{import_file_path_obj.suffix}不支持")
             raise ValidationError(message=f"该文件的后缀格式{import_file_path_obj.suffix}不支持", node_name=self.name)

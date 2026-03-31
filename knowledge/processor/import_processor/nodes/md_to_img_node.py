@@ -590,7 +590,7 @@ class MarkDownToImgNode(BaseNode):
                                                                       config.vl_model)
 
         # 4. 操作_img_uploader
-        self.log_step("step4","上传文件到MinIO,且更新MD")
+        self.log_step("step4", "上传文件到MinIO,且更新MD")
         new_md_content = self._img_uploader.upload_and_replace(md_path_obj.stem, md_content, img_info_list,
                                                                summaries,
                                                                config.get_minio_base_url(),
@@ -598,6 +598,8 @@ class MarkDownToImgNode(BaseNode):
 
         # 5. 备份调配
         self._md_file_handler.backup(md_path_obj, new_md_content)
+
+        state['md_content'] = new_md_content
 
         return state
 
