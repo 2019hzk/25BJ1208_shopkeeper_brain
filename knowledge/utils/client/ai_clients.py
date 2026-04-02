@@ -50,7 +50,7 @@ class AIClients(BaseClientManager):
     @classmethod
     def get_llm_client(cls, response_format: bool = True) -> ChatOpenAI:
         return cls._get_or_create("_openai_llm_client", cls._openai_llm_lock,
-                                  lambda c: cls._create_llm_client(response_format))
+                                  lambda: cls._create_llm_client(response_format))
 
     @classmethod
     def _create_llm_client(cls, response_format) -> ChatOpenAI:
@@ -81,7 +81,7 @@ class AIClients(BaseClientManager):
 
     @classmethod
     def get_bge_m3_client(cls):
-        return cls._get_or_create(cls._bge_m3_client, cls._bge_m3_lock, cls._create_bge_m3_client)
+        return cls._get_or_create("_bge_m3_client", cls._bge_m3_lock, cls._create_bge_m3_client)
 
     @classmethod
     def _create_bge_m3_client(cls):
