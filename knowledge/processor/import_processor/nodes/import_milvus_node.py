@@ -1,6 +1,5 @@
-from chunk import Chunk
 from dataclasses import dataclass
-from typing import List, Dict, Any, Tuple, Optional, Sequence
+from typing import List, Dict, Any, Tuple, Optional
 from pymilvus import MilvusClient, DataType
 from knowledge.processor.import_processor.base import BaseNode, setup_logging
 from knowledge.processor.import_processor.state import ImportGraphState
@@ -142,6 +141,8 @@ class ImportMilvusNode(BaseNode):
 
         _inserter.insert_rows(validated_chunks)
 
+        # 6. 返回state
+        return state
 
     def _validate_state(self, state: ImportGraphState) -> Tuple[List[Dict[str, Any]], int]:
 
@@ -184,3 +185,35 @@ class ImportMilvusNode(BaseNode):
 
         # 4. 创建集合
         milvus_client.create_collection(collection_name=chunks_collection, schema=schema, index_params=index_params)
+
+
+def _cli_main() -> None:
+    import json
+    from pathlib import Path
+    setup_logging()
+
+    temp_dir = Path(
+        r"D:\develop\develop\workspace\pycharm\BJ251208\shopkeeper_brain\knowledge\processor\import_processor\temp_dir"
+        )
+    input_path = temp_dir / "chunks_vector_bak.json"
+    output_path = temp_dir / "chunks_vector_ids.json"
+
+    if not input_path.exists():
+        raise FileNotFoundError(f"找不到输入文件: {input_path}")
+
+    with open(input_path, "r", encoding="utf-8") as f:
+        content = json.load(f)
+
+    state: ImportGraphState = {"chunks": content.get('chunks')}
+
+    node = ImportMilvusNode()
+    result_state = node.process(state)
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(result_state, f, ensure_ascii=False, indent=4)
+
+    print(f"结果已保存至: {output_path}")
+
+
+if __name__ == '__main__':
+    _cli_main()
