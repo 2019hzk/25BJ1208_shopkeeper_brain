@@ -1,5 +1,5 @@
 from typing import List, Tuple, Dict, Any, Optional
-
+from pathlib import Path
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import SystemMessage, HumanMessage
 from pymilvus.model.hybrid import BGEM3EmbeddingFunction
@@ -307,7 +307,12 @@ if __name__ == '__main__':
     setup_logging()
 
     # 1. 读取chunk.json
-    chunk_json_path = r"D:\develop\develop\workspace\pycharm\BJ251208\shopkeeper_brain\knowledge\processor\import_processor\temp_dir\chunks.json"
+    temp_dir = Path(
+        r"D:\develop\develop\workspace\pycharm\BJ251208\shopkeeper_brain\knowledge\processor\import_processor\temp_dir")
+
+    chunk_json_path = temp_dir / "chunks.json"
+    output_path = temp_dir / "chunks_item_name.json"
+
     with open(chunk_json_path, "r", encoding="utf-8") as f:
         chunk_content = json.load(f)
 
@@ -327,3 +332,8 @@ if __name__ == '__main__':
     print(f"商品名: {result.get('item_name')}")
     print(f"chunks数量: {len(result.get('chunks', []))}")
     print(f"首个chunk是否含item_name: {'item_name' in result['chunks'][0]}")
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(result, f, ensure_ascii=False, indent=4)
+
+    print(f"item_name:{result.get('item_name')}生成完成，结果已保存至:\n{output_path}")

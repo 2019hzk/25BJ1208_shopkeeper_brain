@@ -59,7 +59,6 @@ class ImportConfig:
         default_factory=lambda: os.getenv("ENTITY_NAME_COLLECTION", "")
     )
 
-
     # ==================== MinIO 配置 ====================
     minio_endpoint: str = field(
         default_factory=lambda: os.getenv("MINIO_ENDPOINT", "")
@@ -79,7 +78,7 @@ class ImportConfig:
     embedding_dim: int = field(
         default_factory=lambda: int(os.getenv("EMBEDDING_DIM", "1024"))
     )
-    embedding_batch_size: int = 8
+    embedding_batch_size: int = 8  # 修改
 
     # ==================== 速率限制 ====================
     requests_per_minute: int = 15  # 图片总结 API 速率限制
