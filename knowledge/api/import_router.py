@@ -6,9 +6,10 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 
 from knowledge.core.paths import get_front_page_dir
-from knowledge.schema.upload_schema import UploadResponse
+from knowledge.schema.upload_schema import UploadResponse,TaskStatusResponse
 from knowledge.service.upload_service import UpLoadService
 from knowledge.core.deps import get_upload_file_service
+from knowledge.utils.task_util import get_task_info
 
 
 # 1. 创建fastapi实例
@@ -74,7 +75,7 @@ def register_router(app: FastAPI):
         return UploadResponse(message=f"{file.filename}文件上传成功", task_id=task_id)
 
     @app.get("/status/{task_id}")
-    def get_task_status_endpoint():
+    def get_task_status_endpoint(task_id: str):
         """
         查询上传任务：前端会轮训的调用查询上传任务状态结构。（1.5s轮训一次）
         # 轮询:1.性能 2.实时性
@@ -82,10 +83,13 @@ def register_router(app: FastAPI):
         Returns:
         """
 
+        task_info = get_task_info(task_id)
+
+        return TaskStatusResponse(**task_info)
 
 
 if __name__ == '__main__':
     # param1:fastapi实例
     # param2:启动的服务器地址
     # param3:启动的服务端口
-    uvicorn.run(app=create_app(), host="0.0.0.0", port=9000, log_level="info")
+    uvicorn.run(app=create_app(), host="0.0.0.0", port=8000, log_level="info")

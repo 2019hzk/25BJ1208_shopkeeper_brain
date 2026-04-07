@@ -1,6 +1,7 @@
 import os.path
 import logging
 import shutil
+import time
 import uuid
 from datetime import datetime
 from fastapi import UploadFile
@@ -8,6 +9,10 @@ from knowledge.core.paths import get_local_base_dir
 from knowledge.processor.import_processor.exceptions import FileProcessingError
 from knowledge.utils.client.storage_clients import StorageClients
 from knowledge.processor.import_processor.main_graph import import_app
+from knowledge.utils.task_util import update_task_status, add_running_task, add_done_task, add_node_duration, \
+    TASK_STATUS_PROCESSING, \
+    TASK_STATUS_COMPLETED, \
+    TASK_STATUS_FAILED
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -36,7 +41,10 @@ class UpLoadService:
 
         """
 
-        # 1. 定义运行graph流程的状态
+        # 1. 更新任务状态为processing
+        update_task_status(task_id, TASK_STATUS_PROCESSING)
+
+        # 2. 定义运行graph流程的状态
         graph_state = {
             "task_id": task_id,
             "import_file_path": import_file_path,
@@ -44,11 +52,20 @@ class UpLoadService:
         }
 
         # stream:迭代整个graph图状态可以得到每一个节点的事件(节点的名字以及节点操作完state之后的新状态)
+        # 3. 运行整个导入图状态
+        try:
+            for event in import_app.stream(graph_state):
 
-        for event in import_app.stream(graph_state):
-            for key, value in event.items():
-                logger.info(f"当前正在执行的节点--->{key}")
+                for key, value in event.items():
+                    logger.info(f"当前正在执行的节点--->{key}")
 
+            # 3.1 更新任务为已完成
+            update_task_status(task_id, TASK_STATUS_COMPLETED)
+        except Exception as e:
+            logger.error(f"[{task_id}] 执行导入过程中出现异常 原因{str(e)}")
+
+            # 3.2 更新任务为失败
+            update_task_status(task_id, TASK_STATUS_FAILED)
 
     def process_upload_file(self, file: UploadFile):
         """
@@ -65,7 +82,10 @@ class UpLoadService:
         """
 
         # 1. 生成任务id
+
         task_id = str(uuid.uuid4().hex[:8])  # 真正的随机 获取前8个随机数
+        add_running_task(task_id, "upload_file")
+        start_time = time.time()
 
         # 2. 生成日期目录并且将日期目录和临时目录拼接到一起
         base_file_dir = self.get_base_dir()
@@ -78,6 +98,9 @@ class UpLoadService:
 
         # 5. 保存文件到minio中
         self.save_upload_file_to_minio(import_file_path, file.filename)
+        end_time = time.time()
+        add_done_task(task_id, "upload_file")
+        add_node_duration(task_id, "upload_file", end_time - start_time)
 
         # 6. 返回图谱的信息
         return task_id, import_file_path, file_dir
