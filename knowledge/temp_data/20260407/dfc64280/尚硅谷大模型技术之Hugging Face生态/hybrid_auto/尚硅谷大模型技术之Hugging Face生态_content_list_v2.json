@@ -1,0 +1,5739 @@
+[
+    [
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷大模型技术之 Hugging Face 生态"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                181,
+                93,
+                818,
+                124
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "（作者：尚硅谷研究院）"
+                    }
+                ]
+            },
+            "bbox": [
+                394,
+                126,
+                600,
+                143
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "版本：V1.0.1"
+                    }
+                ]
+            },
+            "bbox": [
+                436,
+                173,
+                556,
+                190
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "第 1 章 Hugging Face 生态概览"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                249,
+                515,
+                271
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.1 简介"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                146,
+                290,
+                240,
+                309
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Hugging Face 是一家提供开源 AI 工具和平台的公司，致力于简化预训练模型的使用，加速机器学习项目的开发与落地。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                324,
+                847,
+                368
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "最初以 Transformers 库闻名，该库极大地降低了使用 BERT、GPT、T5 等模型的门槛。如今，Hugging Face 已发展成为一个完整的 AI 开发生态系统，支持自然语言处理、计算机视觉、语音处理、多模态任务等多个领域。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                380,
+                848,
+                451
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Hugging Face 的生态系统主要由两个核心部分组成："
+                    }
+                ]
+            },
+            "bbox": [
+                179,
+                464,
+                584,
+                479
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1）Hugging Face Hub "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                157,
+                492,
+                332,
+                508
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Hugging Face 提供了一个集中式的开源平台，用于托管和分享模型、数据集和应用。"
+                    }
+                ]
+            },
+            "bbox": [
+                179,
+                519,
+                826,
+                535
+            ]
+        },
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/177ee46b46d5197c04a1fcb61eec2a37220b94391b3052b658110bfd5f19a886.jpg"
+                },
+                "image_caption": [],
+                "image_footnote": []
+            },
+            "bbox": [
+                147,
+                545,
+                855,
+                760
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "官网地址为：https://huggingface.co/"
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                770,
+                455,
+                785
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "国内镜像地址为：https://hf-mirror.com/"
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                797,
+                480,
+                813
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2）工具链（Libraries）"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                157,
+                825,
+                339,
+                840
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Hugging Face 提供了一套围绕预训练模型构建的工具库。这些组件彼此独立，又可以协同工作，覆盖了从数据处理到模型训练与推理的完整流程。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                852,
+                847,
+                896
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "J尚硅谷"
+                    }
+                ]
+            },
+            "bbox": [
+                147,
+                48,
+                257,
+                73
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷大模型技术之 Hugging Face 生态"
+                    }
+                ]
+            },
+            "bbox": [
+                455,
+                59,
+                831,
+                77
+            ]
+        },
+        {
+            "type": "page_footer",
+            "content": {
+                "page_footer_content": [
+                    {
+                        "type": "text",
+                        "content": "更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                923,
+                794,
+                940
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Datasets>Tokenizers Transformers "
+                    }
+                ]
+            },
+            "bbox": [
+                309,
+                109,
+                695,
+                123
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "各组件具体功能如下："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                149,
+                352,
+                165
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": " Datasets "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                181,
+                179,
+                287,
+                193
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Datasets 是用于加载和处理数据集的工具库。支持从在线仓库或本地文件（如 CSV、JSON）加载文本数据，并支持清洗、编码、切分等预处理操作。处理后的数据可直接用于模型训练，是连接原始数据与模型输入的重要桥梁。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                206,
+                848,
+                277
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": " Tokenizers "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                181,
+                290,
+                304,
+                304
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Tokenizers 是用于将文本转换为模型输入的工具。它支持文本分词、编码为 token ID，同时自动处理特殊符号、填充（padding）、attention mask 和句子对标记（token type ID）。分词器通常与模型配套使用，可通过统一接口加载。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                317,
+                848,
+                388
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": " Transformers "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                181,
+                401,
+                326,
+                414
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Transformers 是 Hugging Face 最核心的库，用于加载、使用和微调各种预训练模型。该库统一了模型接口，支持数百种模型结构，如 BERT、GPT 等，用户可以通过一行代码from_pretrained()直接加载公开模型，快速用于推理或训练。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                428,
+                848,
+                500
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "第 2 章 预训练模型的加载与使用"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                517,
+                529,
+                538
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2.1 模型加载详解"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                558,
+                336,
+                577
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2.1.1 AutoModel 类 "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                596,
+                354,
+                614
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "在使用 Hugging Face 生态中的预训练模型时，第一步往往是从 Hub 上选择一个合适的模型，然后将其加载到本地进行微调或推理。为了简化这一流程，Transformers 库提供了统一的模型加载接口——AutoModel，用于自动下载和加载模型。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                630,
+                848,
+                702
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "具体代码如下："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                714,
+                299,
+                728
+            ]
+        },
+        {
+            "type": "algorithm",
+            "content": {
+                "algorithm_caption": [],
+                "algorithm_content": [
+                    {
+                        "type": "text",
+                        "content": "from transformers import AutoModel   \n#加载模型   \nmodel  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "="
+                    },
+                    {
+                        "type": "text",
+                        "content": " AutoModel.from_pretrained(\"google-bert/bert-base-chinese\")"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                736,
+                789,
+                809
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "上述代码执行的操作如下："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                815,
+                386,
+                831
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1）下载模型所需资源"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                157,
+                843,
+                332,
+                859
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网"
+                    }
+                ]
+            },
+            "bbox": [
+                146,
+                923,
+                793,
+                940
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "J尚硅谷"
+                    }
+                ]
+            },
+            "bbox": [
+                147,
+                48,
+                257,
+                73
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷大模型技术之 Hugging Face 生态"
+                    }
+                ]
+            },
+            "bbox": [
+                457,
+                59,
+                831,
+                77
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "AutoModel 会根据提供的模型名称，从 Hugging Face Hub 上下载所需的模型资源，包括模型权重和配置文件。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                93,
+                848,
+                137
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "这些文件会自动缓存到本地，默认路径是：~/.cache/huggingface/hub/。下次加载相同模型时会直接读取缓存，不再联网下载。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                149,
+                848,
+                193
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "注意：如需使用国内镜像站，需配置如下环境变量"
+                    }
+                ]
+            },
+            "bbox": [
+                179,
+                206,
+                574,
+                221
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "HF ENDPOINT=https://hf-mirror.com "
+                    }
+                ],
+                "code_language": "txt"
+            },
+            "bbox": [
+                144,
+                227,
+                500,
+                241
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2）根据配置文件创建模型"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                157,
+                247,
+                366,
+                263
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "配置文件（config.json）定义了模型的结构信息，Transformers 会据此识别模型类型（如BERT），并自动实例化对应的模型类（如 BertModel）。这些模型类均继承自 PyTorch 的nn.Module，因此构建出的对象本质上是一个标准的神经网络模型。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                275,
+                847,
+                347
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "上述代码得到的 model 类型为 BertModel。"
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                359,
+                505,
+                373
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "3）加载模型权重"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                157,
+                387,
+                295,
+                401
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "将下载的权重文件加载到模型实例中，至此模型准备完毕，可直接用于推理或微调。"
+                    }
+                ]
+            },
+            "bbox": [
+                179,
+                414,
+                831,
+                429
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "除了在线加载模型之外，from_pretrained()也支持从本地路径加载模型，要求目录中包含模型权重和配置文件，代码如下"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                470,
+                848,
+                513
+            ]
+        },
+        {
+            "type": "algorithm",
+            "content": {
+                "algorithm_caption": [],
+                "algorithm_content": [
+                    {
+                        "type": "text",
+                        "content": "from transformers import AutoModel   \n#加载模型   \nmodel  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "="
+                    },
+                    {
+                        "type": "text",
+                        "content": " AutoModel.from_pretrained(\"/pretrained/bert-base-chinese\")"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                521,
+                800,
+                593
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2.1.2 AutoModelForXXX 类 "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                602,
+                440,
+                621
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "AutoModel 只加载预训练模型的主干结构，不包含任何任务相关的输出层，适用于特征提取或自定义模型结构的场景。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                637,
+                848,
+                680
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "除此之外，Transformers 还提供了用于具体任务的专用模型类：AutoModelForXXX，这些类在模型主干的基础上，自动添加了适配任务的输出层（通常称为“任务头”或 TaskHead），使模型能够直接用于分类、命名实体识别、问答等标准 NLP 任务的训练与推理，无需手动修改结构。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                692,
+                853,
+                790
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "常用的任务模型类有："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                804,
+                351,
+                819
+            ]
+        },
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/31271153d36f1436085c289b6009739d380cc7af03618514df43336e9ca50d15.jpg"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "<table><tr><td>模型类名称</td><td>适用任务类型</td><td>简要说明</td></tr><tr><td>AutoModelForCausalLM</td><td>自回归语言建模</td><td>用于根据已有文本逐字生成后续文本</td></tr><tr><td>AutoModelForSeq2SeqLM</td><td>序列到序列生</td><td>适用于机器翻译、文本摘要、对话</td></tr><tr><td></td><td>成任务</td><td>生成</td></tr><tr><td>AutoModelForSequenceClassification</td><td>文本分类</td><td>例如情感分析、主题分类、多标签分类</td></tr><tr><td>AutoModelForTokenClassification</td><td>Token级别标注任务</td><td>如命名实体识别（NER）</td></tr><tr><td>AutoModelForQuestionAnswering</td><td>抽取式问答</td><td>用于从上下文中找出答案的起始和结束位置</td></tr></table>",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                139,
+                824,
+                858,
+                903
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "J尚硅谷"
+                    }
+                ]
+            },
+            "bbox": [
+                147,
+                48,
+                257,
+                73
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷大模型技术之 Hugging Face 生态"
+                    }
+                ]
+            },
+            "bbox": [
+                455,
+                59,
+                831,
+                77
+            ]
+        },
+        {
+            "type": "page_footer",
+            "content": {
+                "page_footer_content": [
+                    {
+                        "type": "text",
+                        "content": "更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                923,
+                794,
+                940
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                139,
+                86,
+                858,
+                223
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "上述 AutoModelForXXX 类的用法与 AutoModel 类一致，例如现在需要一个基于bert-base-chinese 的文本分类模型，便可直接通过以下代码进行加载："
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                227,
+                848,
+                271
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "加载模型  \nfrom transformers import AutoModelForSequenceClassification  \nmodel =  \nAutoModelForSequenceClassification.from_pretrained(\"google-bert/bert-base-chinese\") "
+                    }
+                ],
+                "code_language": "txt"
+            },
+            "bbox": [
+                144,
+                277,
+                843,
+                388
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "上述代码得到的 model 的类型为 BertForSequenceClassification。模型结构包括："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                394,
+                788,
+                410
+            ]
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": " BERT 编码器主干；"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": " 一个线性层（任务头），用于输出每个类别的得分。"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                422,
+                618,
+                464
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "此外，对于特定任务的模型，我们还可以在 from_pretrained() 中设置一些参数用于控制任务头的行为，例如："
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                476,
+                848,
+                521
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "model = AutoModelForSequenceClassification.from_pretrained(\"google-bert/bert-base-chinese\", num_labels=3) "
+                    }
+                ],
+                "code_language": "javascript"
+            },
+            "bbox": [
+                146,
+                527,
+                724,
+                600
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "参数说明："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                607,
+                263,
+                621
+            ]
+        },
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/6a015233eb1c97cbf5b228ce8d2d88c8f3717bc9f180b28da0c94e964037ca5e.jpg"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "<table><tr><td>参数名</td><td>说明</td></tr><tr><td>num_labels</td><td>指定分类任务的类别数，默认值为2。用于构建分类头的输出维度</td></tr></table>",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                142,
+                627,
+                776,
+                669
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2.2 模型输入输出详解"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                676,
+                381,
+                696
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "在使用 Hugging Face 的 Transformers 模型时，理解其输入格式与输出结构，是正确使用模型的前提。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                711,
+                848,
+                753
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "由于通过 AutoModel 或 AutoModelForXXX 加载的模型，本质上是 PyTorch 的nn.Module 子类，其前向传播过程通过 forward() 方法实现，所以要了解某个模型支持哪些输入参数、返回哪些输出字段，最直接、最权威的方式就是查看其 forward() 方法定义。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                766,
+                848,
+                838
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "各模型 forward 方法的定义，可查看 Transformers 库的 API 文档："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                850,
+                678,
+                865
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "U "
+                    }
+                ]
+            },
+            "bbox": [
+                147,
+                48,
+                181,
+                73
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷"
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                49,
+                258,
+                66
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷大模型技术之 Hugging Face 生态"
+                    }
+                ]
+            },
+            "bbox": [
+                457,
+                60,
+                831,
+                77
+            ]
+        },
+        {
+            "type": "page_footer",
+            "content": {
+                "page_footer_content": [
+                    {
+                        "type": "text",
+                        "content": "更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网"
+                    }
+                ]
+            },
+            "bbox": [
+                146,
+                923,
+                794,
+                940
+            ]
+        }
+    ],
+    [
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/62b21970987e444608874e86a370929ab38698ce026460db9f0121275a88aa4e.jpg"
+                },
+                "image_caption": [],
+                "image_footnote": []
+            },
+            "bbox": [
+                149,
+                95,
+                853,
+                379
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "例如："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                392,
+                228,
+                406
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "BertModel 的 forward 方法定义可参考如下链接"
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                419,
+                549,
+                434
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": " 官方网站："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                447,
+                300,
+                462
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "https://huggingface.co/docs/transformers/model_doc/bert#transformers.BertModel.forward "
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                475,
+                830,
+                491
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": " 镜像网站："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                502,
+                300,
+                517
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "https://hf-mirror.com/docs/transformers/model_doc/bert#transformers.BertModel.forward "
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                531,
+                821,
+                546
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "BertForSequenceClassification 的 forward 方法定义可参考如下链接"
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                558,
+                700,
+                574
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": " 官方网站："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                586,
+                300,
+                601
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "https://huggingface.co/docs/transformers/model_doc/bert#transformers.BertForSequenceClas sification.forward "
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                615,
+                847,
+                657
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": " 镜像网站："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                669,
+                300,
+                684
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "https://hf-mirror.com/docs/transformers/model_doc/bert#transformers.BertForSequenceClass ification.forward "
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                697,
+                847,
+                741
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "第 3 章 Tokenizer 的加载与使用"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                758,
+                517,
+                778
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "3.1 概述"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                800,
+                240,
+                818
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "在 Hugging Face 的 Transformers 库中，每一个预训练模型都配套绑定有一个专用的Tokenizer，它负责将原始文本转换为模型可以理解的输入格式（如 input_ids、attention_mask等），是连接原始文本与模型计算之间的关键环节。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                834,
+                848,
+                904
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                923,
+                794,
+                940
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "U "
+                    }
+                ]
+            },
+            "bbox": [
+                147,
+                48,
+                181,
+                73
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷"
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                51,
+                258,
+                67
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷大模型技术之 Hugging Face 生态"
+                    }
+                ]
+            },
+            "bbox": [
+                457,
+                59,
+                831,
+                77
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "这些 Tokenizer 通常集成了从文本到张量的全流程处理能力，主要包括以下几个方面："
+                    }
+                ]
+            },
+            "bbox": [
+                179,
+                93,
+                845,
+                110
+            ]
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": " 子词切分（subword tokenization）：将输入文本拆分为子词单元；"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": " 编码映射：将每个子词转换为对应的整数 ID，即 input_ids；"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": " 添加特殊 Token：自动插入如 [CLS]、[SEP] 等任务相关的特殊符号；"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": " 截断与补齐（truncation & padding）：统一输入序列长度，构造批量输入；"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": " 生成辅助输入：根据模型需求生成 attention_mask、token_type_ids 等附加字段；"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bbox": [
+                179,
+                122,
+                830,
+                250
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "3.2 加载 Tokenizer"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                265,
+                344,
+                282
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "在 Transformers 库中，AutoTokenizer 用于加载与指定模型配套的分词器。它会根据模型名称自动选择并实例化正确的分词器类型（如 BertTokenizer、GPT2Tokenizer、T5Tokenizer等）。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                298,
+                848,
+                369
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "AutoTokenizer 的用法与 AutoModel 相似，具体用法如下："
+                    }
+                ]
+            },
+            "bbox": [
+                179,
+                382,
+                621,
+                397
+            ]
+        },
+        {
+            "type": "algorithm",
+            "content": {
+                "algorithm_caption": [],
+                "algorithm_content": [
+                    {
+                        "type": "text",
+                        "content": "from transformers import AutoTokenizer   \n#加载分词   \ntokenizer  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\equiv"
+                    },
+                    {
+                        "type": "text",
+                        "content": "   \nAutoTokenizer.from_pretrained(\"google-bert/bert-base-chinese\") "
+                    }
+                ]
+            },
+            "bbox": [
+                146,
+                405,
+                751,
+                495
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "上述代码执行的操作如下："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                502,
+                386,
+                517
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "AutoTokenizer 会根据提供的模型名称，从 Hugging Face Hub 上下载所需的文件资源，包括配置文件词表。这些文件会自动缓存到本地，默认路径是：~/.cache/huggingface/hub/。下次加载相同模型时会直接读取缓存，不再联网下载。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                530,
+                847,
+                601
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "注意：如需使用国内镜像站，需配置如下环境变量"
+                    }
+                ]
+            },
+            "bbox": [
+                179,
+                613,
+                574,
+                629
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "HF_ENDPOINT=https://hf-mirror.com "
+                    }
+                ],
+                "code_language": "txt"
+            },
+            "bbox": [
+                146,
+                634,
+                500,
+                650
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "之后 AutoTokenizer 便会根据配置文件和词表实例化一个 Tokenizer 对象。"
+                    }
+                ]
+            },
+            "bbox": [
+                179,
+                656,
+                739,
+                671
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "除了在线加载模型之外，from_pretrained()也支持从本地路径加载模型，要求目录中包含词表和配置文件，代码如下"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                711,
+                847,
+                753
+            ]
+        },
+        {
+            "type": "algorithm",
+            "content": {
+                "algorithm_caption": [],
+                "algorithm_content": [
+                    {
+                        "type": "text",
+                        "content": "from transformers import AutoTokenizer   \n#加载模型   \ntokenizer  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\equiv"
+                    },
+                    {
+                        "type": "text",
+                        "content": "   \nAutoTokenizer.from_pretrained(\"/pretrained/bert-base-chinese\") "
+                    }
+                ]
+            },
+            "bbox": [
+                146,
+                762,
+                761,
+                852
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "3.3 使用 Tokenizer"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                862,
+                344,
+                879
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                923,
+                793,
+                940
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "J尚硅谷"
+                    }
+                ]
+            },
+            "bbox": [
+                147,
+                48,
+                257,
+                73
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷大模型技术之 Hugging Face 生态"
+                    }
+                ]
+            },
+            "bbox": [
+                455,
+                59,
+                831,
+                77
+            ]
+        }
+    ],
+    [
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "3.3.1 概述"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                97,
+                258,
+                116
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "前文提到过，Transformers 库中的 Tokenizer 包括如下功能："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                131,
+                636,
+                148
+            ]
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": " 子词切分"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": " 编码映射 "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": " 添加特殊 Toke "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": " 截断与补齐 "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": " 生成辅助输入"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                159,
+                332,
+                285
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "下面逐一进行演示："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                299,
+                334,
+                313
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "3.3.2 常用 API"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                329,
+                305,
+                348
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1）分词（tokenize）"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                159,
+                363,
+                315,
+                378
+            ]
+        },
+        {
+            "type": "algorithm",
+            "content": {
+                "algorithm_caption": [],
+                "algorithm_content": [
+                    {
+                        "type": "text",
+                        "content": "from transformers import AutoTokenizer   \n#加载分词器和模型   \ntokenizer  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\equiv"
+                    },
+                    {
+                        "type": "text",
+                        "content": "   \nAutoTokenizer.from_pretrained(\"/pretrained/bert-base-chinese\")   \ntokens  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\equiv"
+                    },
+                    {
+                        "type": "text",
+                        "content": " tokenizertokenizer(\"我爱自然语言处理\")   \nprint(tokens)"
+                    }
+                ]
+            },
+            "bbox": [
+                146,
+                385,
+                761,
+                552
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "输出内容如下"
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                558,
+                290,
+                573
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "['我', '爱', '自', '然', '语', '言', '处', '理'] "
+                    }
+                ]
+            },
+            "bbox": [
+                147,
+                580,
+                626,
+                596
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2）token 转 ID（convert_tokens_to_ids）"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                157,
+                602,
+                473,
+                619
+            ]
+        },
+        {
+            "type": "algorithm",
+            "content": {
+                "algorithm_caption": [],
+                "algorithm_content": [
+                    {
+                        "type": "text",
+                        "content": "from transformers import AutoTokenizer   \n#加载分词器和模型   \ntokenizer  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\equiv"
+                    },
+                    {
+                        "type": "text",
+                        "content": "   \nAutoTokenizer.from_pretrained(\"/pretrained/bert-base-chinese\")   \ntokens  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\equiv"
+                    },
+                    {
+                        "type": "text",
+                        "content": " tokenizertokenizer(\"我爱自然语言处理\")   \nids  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\equiv"
+                    },
+                    {
+                        "type": "text",
+                        "content": " tokenizer.convert_tokens_to_ids(tokens)   \nprint.ids)"
+                    }
+                ]
+            },
+            "bbox": [
+                146,
+                625,
+                761,
+                827
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "输出内容如下"
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                833,
+                290,
+                848
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "[2769, 4263, 5632, 4197, 6427, 6241, 1905, 4415] "
+                    }
+                ]
+            },
+            "bbox": [
+                147,
+                854,
+                655,
+                870
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "3）ID 转 token（convert_ids_to_tokens）"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                156,
+                876,
+                473,
+                892
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网"
+                    }
+                ]
+            },
+            "bbox": [
+                146,
+                923,
+                794,
+                940
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "J尚硅谷"
+                    }
+                ]
+            },
+            "bbox": [
+                147,
+                48,
+                257,
+                74
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷大模型技术之 Hugging Face 生态"
+                    }
+                ]
+            },
+            "bbox": [
+                457,
+                59,
+                831,
+                77
+            ]
+        }
+    ],
+    [
+        {
+            "type": "algorithm",
+            "content": {
+                "algorithm_caption": [],
+                "algorithm_content": [
+                    {
+                        "type": "text",
+                        "content": "from transformers import AutoTokenizer   \n#加载分词器和模型   \ntokenizer  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "="
+                    },
+                    {
+                        "type": "text",
+                        "content": "   \nTokenizer.from_pretrained(\"/pretrained/bert-base-chinese\")   \nids  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "="
+                    },
+                    {
+                        "type": "text",
+                        "content": " [2769,4263,5632,4197,6427,6241,1905,4415]   \ntokens  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "="
+                    },
+                    {
+                        "type": "text",
+                        "content": " tokenizer.convert_ids_to_tokens.ids)   \nprint(tokens) "
+                    }
+                ]
+            },
+            "bbox": [
+                146,
+                89,
+                761,
+                292
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "输出内容如下"
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                298,
+                290,
+                313
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "['我', '爱', '自', '然', '语', '言', '处', '理'] "
+                    }
+                ]
+            },
+            "bbox": [
+                147,
+                319,
+                628,
+                337
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4）编码（encode）"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                157,
+                342,
+                305,
+                357
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "编码是将 tokenize "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "^ +"
+                    },
+                    {
+                        "type": "text",
+                        "content": "convert_tokens_to_ids 合并后的结果，通常还会自动添加特殊符号（如 [CLS] 和 [SEP]），除此之外，还支持 padding、truncate 等功能。"
+                    }
+                ]
+            },
+            "bbox": [
+                152,
+                370,
+                848,
+                414
+            ]
+        },
+        {
+            "type": "algorithm",
+            "content": {
+                "algorithm_caption": [],
+                "algorithm_content": [
+                    {
+                        "type": "text",
+                        "content": "from transformers import AutoTokenizer   \n#加载分词器和模型   \ntokenizer  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\equiv"
+                    },
+                    {
+                        "type": "text",
+                        "content": "   \nAutoTokenizer.from_pretrained(\"/pretrained/bert-base-chinese\")   \nids  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\equiv"
+                    },
+                    {
+                        "type": "text",
+                        "content": " tokenizer.encode(\"我爱自然语言处理\")   \nprint ids)"
+                    }
+                ]
+            },
+            "bbox": [
+                146,
+                420,
+                761,
+                586
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "输出内容如下"
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                592,
+                292,
+                608
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "[101, 2769, 4263, 5632, 4197, 6427, 6241, 1905, 4415, 102] "
+                    }
+                ],
+                "code_language": "json"
+            },
+            "bbox": [
+                147,
+                613,
+                761,
+                627
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "注：可通过 add_special_token False 参数禁止添加特殊符号"
+                    }
+                ]
+            },
+            "bbox": [
+                179,
+                634,
+                643,
+                651
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "5）解码（decode）"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                157,
+                662,
+                305,
+                678
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "解码会将一个 token ID 序列还原为对应的原始文本（或接近的文本）。"
+                    }
+                ]
+            },
+            "bbox": [
+                179,
+                690,
+                734,
+                706
+            ]
+        },
+        {
+            "type": "algorithm",
+            "content": {
+                "algorithm_caption": [],
+                "algorithm_content": [
+                    {
+                        "type": "text",
+                        "content": "from transformers import AutoTokenizer   \n#加载分词器和模型   \ntokenizer  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "="
+                    },
+                    {
+                        "type": "text",
+                        "content": "   \nTokenizer.from_pretrained(\"/pretrained/bert-base-chinese\")   \nids  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "="
+                    },
+                    {
+                        "type": "text",
+                        "content": " [101,2769,4263,5632,4197,6427,6241,1905,4415,102]   \nstring  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "="
+                    },
+                    {
+                        "type": "text",
+                        "content": " tokenizerdecode.ids) "
+                    }
+                ]
+            },
+            "bbox": [
+                146,
+                713,
+                771,
+                879
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "U "
+                    }
+                ]
+            },
+            "bbox": [
+                147,
+                48,
+                181,
+                73
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷"
+                    }
+                ]
+            },
+            "bbox": [
+                183,
+                49,
+                258,
+                66
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷大模型技术之 Hugging Face 生态"
+                    }
+                ]
+            },
+            "bbox": [
+                455,
+                59,
+                830,
+                77
+            ]
+        },
+        {
+            "type": "page_footer",
+            "content": {
+                "page_footer_content": [
+                    {
+                        "type": "text",
+                        "content": "更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网"
+                    }
+                ]
+            },
+            "bbox": [
+                146,
+                923,
+                794,
+                940
+            ]
+        }
+    ],
+    [
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "print(string) "
+                    }
+                ],
+                "code_language": "lua"
+            },
+            "bbox": [
+                146,
+                90,
+                275,
+                105
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "输出内容如下："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                112,
+                299,
+                128
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "[CLS] 我爱自然语言处理 [SEP]"
+                    }
+                ],
+                "code_language": "json"
+            },
+            "bbox": [
+                147,
+                135,
+                473,
+                151
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "注：可通过 skip_special_tokens=True 参数跳过特殊符号"
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                156,
+                608,
+                174
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "6）tokenizer() 方法（即 __call__）"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                156,
+                185,
+                431,
+                202
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "这是最推荐的接口，用于直接构造模型所需的输入，其基本用法如下"
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                212,
+                714,
+                228
+            ]
+        },
+        {
+            "type": "algorithm",
+            "content": {
+                "algorithm_caption": [],
+                "algorithm_content": [
+                    {
+                        "type": "text",
+                        "content": "from transformers import AutoTokenizer   \ntokenizer  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "="
+                    },
+                    {
+                        "type": "text",
+                        "content": "   \nAutoTokenizer.from_pretrained(\"/pretrained/bert-base-chinese\")   \ntext  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "="
+                    },
+                    {
+                        "type": "text",
+                        "content": " \"我爱自然语言处理\"   \n#编码文本为模型输入格式   \ninputs  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "="
+                    },
+                    {
+                        "type": "text",
+                        "content": " tokenizer(text)   \nprintinputs)"
+                    }
+                ]
+            },
+            "bbox": [
+                146,
+                236,
+                761,
+                419
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "输出内容如下："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                426,
+                299,
+                441
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "{ 'input_ids': [101, 2769, 4263, 5632, 4197, 6427, 6241, 1905, 4415, 102], 'token_type_ids': [0, 0, 0, 0, 0, 0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1] } "
+                    }
+                ],
+                "code_language": "txt"
+            },
+            "bbox": [
+                147,
+                447,
+                845,
+                532
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "除去 text，tokenizer 还提供了多个重要参数："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                538,
+                522,
+                554
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "inputs = tokenizer( text, padding=True, truncation=True, max_length=128, return_tensors=\"pt\") "
+                    }
+                ],
+                "code_language": "python"
+            },
+            "bbox": [
+                147,
+                562,
+                371,
+                688
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "各参数含义如下请参考官方文档。"
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                696,
+                440,
+                712
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "此外，tokenizer()方法还支持直接对多个文本组成的列表进行批量处理，非常适合用于模型训练或推理。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                724,
+                847,
+                766
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "from transformers import AutoTokenizer\n# 加载分词器和模型\ntokenizer = AutoTokenizer.from_pretrained(\"/pretrained/bert-base-chinese\")\ntexts = [\"我爱自然语言处理\", \"我爱人工智能\", \"我们一起学习\"] "
+                    }
+                ],
+                "code_language": "python"
+            },
+            "bbox": [
+                146,
+                775,
+                761,
+                903
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网"
+                    }
+                ]
+            },
+            "bbox": [
+                146,
+                923,
+                793,
+                940
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "U "
+                    }
+                ]
+            },
+            "bbox": [
+                147,
+                48,
+                181,
+                73
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷"
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                49,
+                258,
+                66
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷大模型技术之 Hugging Face 生态"
+                    }
+                ]
+            },
+            "bbox": [
+                457,
+                59,
+                830,
+                77
+            ]
+        }
+    ],
+    [
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "inputs = tokenizer( texts, padding=\"max_length\", # 自动补齐 truncation=True, # 自动截断 max_length=10, # 统一最大长度 return_tensors=\"pt\" # 返回 PyTorch 张量格式) print(input)"
+                    }
+                ],
+                "code_language": "python"
+            },
+            "bbox": [
+                146,
+                89,
+                601,
+                256
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "输出内容是一个包含三个字段的字典，每个字段是形状为 (batch_size, seq_len) 的张量："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                261,
+                845,
+                278
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "{ 'input_ids': tensor([[101,2769,4263,5632,4197,6427,6241, 1905,4415,102], [101,2769,4263,782,2339,3255,5543,102, 0], [101,2769,812,671,6629,2110,739,102, 0]]) 'token_type_ids': tensor([[0,0,0,0,0,0,0,0,0,0,0], [0,0,0,0,0,0,0,0,0,0,0], [0,0,0,0,0,0,0,0,0,0,0]]), 'attention_mask': tensor([[1,1,1,1,1,1,1,1,1,1,1,1], [1,1,1,1,1,1,1,1,1,0,0], [1,1,1,1,1,1,1,1,1,0,0]]) } "
+                    }
+                ],
+                "code_language": "txt"
+            },
+            "bbox": [
+                147,
+                284,
+                845,
+                480
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "3.4 与预训练模型配合使用"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                489,
+                428,
+                508
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "从文本输入到模型输出的完整流程如下："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                524,
+                492,
+                539
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "from transformers import AutoTokenizer, AutoModel  \nimport torch "
+                    }
+                ],
+                "code_language": "python"
+            },
+            "bbox": [
+                146,
+                546,
+                626,
+                582
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "# 1. 加载模型和分词器"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                602,
+                339,
+                618
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "model_name = \"bert-base-chinese\"\ntokenizer = AutoTokenizer.from_pretrained(model_name)\nmodel = AutoModel.from_pretrained(model_name) "
+                    }
+                ],
+                "code_language": "python"
+            },
+            "bbox": [
+                146,
+                621,
+                662,
+                675
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "# 2. 准备批量文本"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                695,
+                304,
+                709
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "texts = [\"我爱自然语言处理\", \"我爱人工智能\", \"我们一起学习\"] "
+                    }
+                ],
+                "code_language": "txt"
+            },
+            "bbox": [
+                144,
+                714,
+                695,
+                730
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "# 3. 编码文本为模型输入格式"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                751,
+                393,
+                766
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "encoded = tokenizer(\n    texts,\n    padding=\"max_length\",\n    truncation=True,\n    max_length=10,\n    return_tensors=\"pt\") "
+                    }
+                ],
+                "code_language": "python"
+            },
+            "bbox": [
+                147,
+                770,
+                389,
+                896
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网"
+                    }
+                ]
+            },
+            "bbox": [
+                146,
+                923,
+                794,
+                940
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "J尚硅谷"
+                    }
+                ]
+            },
+            "bbox": [
+                147,
+                48,
+                257,
+                74
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷大模型技术之 Hugging Face 生态"
+                    }
+                ]
+            },
+            "bbox": [
+                457,
+                59,
+                831,
+                77
+            ]
+        }
+    ],
+    [
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [
+                    {
+                        "type": "text",
+                        "content": "# 5. 模型推理（不计算梯度）"
+                    }
+                ],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "with torch.no_grad(   ): outputs = model( input_ids=encoded[\"input_ids\"], attention_mask=encoded[\"attention_mask\"], token_type_ids=encoded[\"token_type_ids\"] # 6. 查看输出张量结构 print(outputs.keys(   )) print(\"last Hidden state:\", outputs.last hidden state.shape) print(\"pooler_output:\", outputs.pooler_output.shape) "
+                    }
+                ],
+                "code_language": "python"
+            },
+            "bbox": [
+                146,
+                128,
+                732,
+                329
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "输出内容如下："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                335,
+                299,
+                351
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "odict_keys(['last Hidden state', 'pooler_output'])  \nlast Hidden state: torch.Size([3, 10, 768])  \npooler_output: torch.Size([3, 768]) "
+                    }
+                ],
+                "code_language": "python"
+            },
+            "bbox": [
+                144,
+                356,
+                677,
+                401
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "第 4 章 Datasets 库"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                412,
+                374,
+                432
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.1 概述"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                453,
+                240,
+                472
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "datasets 是 Hugging Face 提供的一个轻量级数据处理库，专为自然语言处理任务设计，能够高效地支持模型训练流程中的数据加载与预处理操作。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                487,
+                847,
+                531
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "它的主要特点包括："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                543,
+                334,
+                558
+            ]
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": " 加载方便：支持读取本地文件（如 CSV、JSON），也支持加载在线公开数据集；"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": " 结构清晰：数据集的内部结构类似表格，每条样本由若干字段组成；"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": " 无缝协作：与 tokenizer 等 Hugging Face 模块高度集成，可直接构造模型输入；"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": " 功能丰富：支持常见的数据处理操作，如批量映射（.map()）、字段筛选、训练/验证集划分（.train_test_split()）等。"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                570,
+                847,
+                699
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "datasets 库的安装命令如下："
+                    }
+                ]
+            },
+            "bbox": [
+                179,
+                709,
+                394,
+                725
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "pip install datasets "
+                    }
+                ],
+                "code_language": "batch"
+            },
+            "bbox": [
+                146,
+                731,
+                361,
+                745
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.2 加载数据集"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                753,
+                310,
+                774
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "datasets 库提供了统一的接口 load_dataset()，既支持从本地文件加载数据，也支持从Hugging Face Hub 加载在线开源数据集。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                788,
+                847,
+                833
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.2.1 加载本地数据"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                847,
+                351,
+                866
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                923,
+                794,
+                940
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "J尚硅谷"
+                    }
+                ]
+            },
+            "bbox": [
+                147,
+                48,
+                257,
+                73
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷大模型技术之 Hugging Face 生态"
+                    }
+                ]
+            },
+            "bbox": [
+                457,
+                59,
+                831,
+                77
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "load_dataset()支持多种本地文件格式，如 CSV、JSON、Parquet，并允许一次加载一个或多个文件。其基本语法如下："
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                93,
+                848,
+                137
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "from datasets import load_dataset dataset = load_dataset.format, data_files=路径或字典) "
+                    }
+                ],
+                "code_language": "python"
+            },
+            "bbox": [
+                146,
+                146,
+                655,
+                199
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "参数说明如下："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                206,
+                299,
+                221
+            ]
+        },
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/89625a63b866dd8649d5d840c892a0d30993963d6e6341a2103d018f46ec4726.jpg"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "<table><tr><td>参数</td><td>类型</td><td>说明</td></tr><tr><td>format</td><td>str</td><td>文件格式，常用的包括&quot;csv&quot;、&quot;json&quot;、&quot;parquet&quot;等</td></tr><tr><td>data_files</td><td>str或dict</td><td>文件路径。可传入字符串（加载单个文件）或字典（加载多个文件，如训练数据/测试数据）</td></tr></table>",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                139,
+                225,
+                858,
+                305
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "具体用法如下："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                310,
+                299,
+                325
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1）加载多个文件"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                159,
+                338,
+                295,
+                354
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "from datasets import load_dataset  \ndataset_dict = load_dataset('csv', data_files={'train': '.data/train.csv', 'test': '.data/test.csv')} "
+                    }
+                ],
+                "code_language": "python"
+            },
+            "bbox": [
+                146,
+                361,
+                608,
+                470
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "此时返回的是一个包含两个 Dataset 的 DatasetDict，其中每个 Dataset 称为一个 split。"
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                476,
+                833,
+                494
+            ]
+        },
+        {
+            "type": "algorithm",
+            "content": {
+                "algorithm_caption": [],
+                "algorithm_content": [
+                    {
+                        "type": "text",
+                        "content": "from datasets import load_dataset   \ndataset_dict  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "="
+                    },
+                    {
+                        "type": "text",
+                        "content": " load_dataset('csv',data_files  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "="
+                    },
+                    {
+                        "type": "text",
+                        "content": " { 'train':'./data/train.csv', 'test':'./data/test.csv'   \n}   \nprint(dataset_dict)   \n# DatasetDict({   \n# train: Dataset(..),   \n# test: Dataset(..)   \n# }） "
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                500,
+                608,
+                734
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2）加载单个文件"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                157,
+                741,
+                295,
+                757
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "from datasets import load_dataset  \ndataset_dict = load_dataset('csv', data_files=' ./data/dataset.csv') "
+                    }
+                ],
+                "code_language": "python"
+            },
+            "bbox": [
+                146,
+                764,
+                800,
+                818
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "此时返回的也是一个 DatasetDict，其中只包含默认命名为 \"train\" 的一个 Dataset。"
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                825,
+                813,
+                840
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "print(dataset_dict) # DatasetDict({ # train: Dataset(...) "
+                    }
+                ],
+                "code_language": "txt"
+            },
+            "bbox": [
+                146,
+                848,
+                391,
+                901
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网"
+                    }
+                ]
+            },
+            "bbox": [
+                146,
+                923,
+                794,
+                940
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "J尚硅谷"
+                    }
+                ]
+            },
+            "bbox": [
+                147,
+                48,
+                257,
+                73
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷大模型技术之 Hugging Face 生态"
+                    }
+                ]
+            },
+            "bbox": [
+                457,
+                59,
+                831,
+                77
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "# # }) "
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                90,
+                189,
+                105
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.2.2 查看数据集"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                116,
+                329,
+                135
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "本节以情感分析案例中的评论数据集为例，演示如何使用 `datasets` 的常用 API 查看数据内容："
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                149,
+                848,
+                193
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1）获取 Dataset "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                157,
+                206,
+                292,
+                221
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "load_dataset()返回的是一个 DatasetDict 对象，可以像字典一样通过键名（如 \"train\"）访问 split。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                233,
+                840,
+                278
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "from datasets import load_dataset  \ndataset_dict = load_dataset('csv', data_files='data/raw/online_shopping_10 Cats.csv')  \ndataset = dataset_dict[\"train\"] "
+                    }
+                ],
+                "code_language": "python"
+            },
+            "bbox": [
+                146,
+                284,
+                636,
+                394
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "此时 dataset 是一个 `Dataset` 对象，表示训练集。"
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                400,
+                568,
+                416
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2）访问样本"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                157,
+                428,
+                262,
+                444
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Dataset 支持索引和切片操作来访问样本："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                456,
+                497,
+                470
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "print(dataset[0]) #单条样本 print(dataset[:3]) #多条样本（注意返回结构）"
+                    }
+                ],
+                "code_language": "txt"
+            },
+            "bbox": [
+                146,
+                479,
+                603,
+                514
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "返回结构说明："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                521,
+                299,
+                536
+            ]
+        },
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/1a4c044521e4e2f0c1b7389967d59afb5cff5f2a9487750312b21cc4b8a14f06.jpg"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "<table><tr><td>访问方式</td><td>返回示例</td></tr><tr><td>dataset[0]</td><td>{&#x27;review&#x27;: &#x27;很喜欢的一本书&#x27;, &#x27;label&#x27;: 1, &#x27;cat&#x27;: &#x27;书籍&#x27;}</td></tr><tr><td>dataset[:3]</td><td>{&#x27;review&#x27;: [&#x27;很喜欢的一本书&#x27;, &#x27;内容丰富&#x27;, &#x27;讲解清晰&#x27;], &#x27;label&#x27;: [1, 1, 1], &#x27;cat&#x27;: [&#x27;书籍&#x27;, &#x27;书籍&#x27;, &#x27;书籍&#x27;]}</td></tr></table>",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                139,
+                541,
+                858,
+                621
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "3）访问某个字段值 "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                157,
+                625,
+                314,
+                640
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "可以进一步通过字段名访问某个字段的值："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                653,
+                510,
+                669
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "print(dataset[0]['review']) #第一条样本的 review 字段  \nprint(dataset[:3]['review']) #前三条样本的 review 字段列表"
+                    }
+                ],
+                "code_language": "txt"
+            },
+            "bbox": [
+                144,
+                675,
+                761,
+                712
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.2.3 加载在线数据"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                720,
+                354,
+                740
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Hugging Face Hub 提供了大量开源数据集，涵盖文本分类、问答、翻译、摘要等任务，可以在官网浏览与搜索："
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                755,
+                847,
+                799
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "J尚硅谷"
+                    }
+                ]
+            },
+            "bbox": [
+                147,
+                48,
+                257,
+                74
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷大模型技术之 Hugging Face 生态"
+                    }
+                ]
+            },
+            "bbox": [
+                455,
+                59,
+                831,
+                77
+            ]
+        },
+        {
+            "type": "page_footer",
+            "content": {
+                "page_footer_content": [
+                    {
+                        "type": "text",
+                        "content": "更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网"
+                    }
+                ]
+            },
+            "bbox": [
+                146,
+                923,
+                794,
+                940
+            ]
+        }
+    ],
+    [
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/d4f982411c94766f06f9133f2c241acb80173ca126db5d105ffedef411dbe372.jpg"
+                },
+                "image_caption": [],
+                "image_footnote": []
+            },
+            "bbox": [
+                149,
+                91,
+                853,
+                382
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "每个数据集页面都会提供示例代码，方便直接复制使用。"
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                391,
+                616,
+                407
+            ]
+        },
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/3859079d2f69f3ddb0195cbd70e68c382498d79bb20664e6731e11162dfde8a7.jpg"
+                },
+                "image_caption": [],
+                "image_footnote": []
+            },
+            "bbox": [
+                149,
+                414,
+                853,
+                781
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "具体代码如下图所示："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                789,
+                351,
+                804
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "U "
+                    }
+                ]
+            },
+            "bbox": [
+                147,
+                48,
+                181,
+                73
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷"
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                51,
+                258,
+                67
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷大模型技术之 Hugging Face 生态"
+                    }
+                ]
+            },
+            "bbox": [
+                458,
+                60,
+                830,
+                77
+            ]
+        },
+        {
+            "type": "page_footer",
+            "content": {
+                "page_footer_content": [
+                    {
+                        "type": "text",
+                        "content": "更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网"
+                    }
+                ]
+            },
+            "bbox": [
+                147,
+                923,
+                793,
+                940
+            ]
+        }
+    ],
+    [
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/acbb1e6a0bd2f041053895011eda6a52f3332879d052edc58a6131f8ae125223.jpg"
+                },
+                "image_caption": [],
+                "image_footnote": []
+            },
+            "bbox": [
+                147,
+                92,
+                848,
+                288
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "执行上述代码时，数据集会自动从 Hugging Face Hub 下载，并缓存至本地用户目录，默认路径为：~/.cache/huggingface/datasets/"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                298,
+                840,
+                342
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "后续再次使用时将自动从本地加载，无需联网或重复下载。"
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                354,
+                633,
+                370
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "加载完成后，返回一个 DatasetDict 对象，结构和使用方式与本地数据完全一致。"
+                    }
+                ]
+            },
+            "bbox": [
+                179,
+                382,
+                801,
+                398
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.3 预处理数据集"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                412,
+                334,
+                432
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "除了加载数据， datasets 库还支持常见的数据预处理操作，如编码文本、删除列、过滤样本、划分子集和设置张量格式。本节将逐步介绍这些功能。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                445,
+                848,
+                489
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.3.1 删除列 "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                505,
+                282,
+                524
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "可通过 .remove_columns() 删除不再需要的字段"
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                539,
+                552,
+                556
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "dataset = dataset.remove-columns(['cat']) "
+                    }
+                ],
+                "code_language": "javascript"
+            },
+            "bbox": [
+                146,
+                563,
+                547,
+                579
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.3.2 过滤行"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                589,
+                280,
+                607
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "可使用 .filter() 筛选符合条件的样本"
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                623,
+                465,
+                638
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "dataset = dataset.filter(lambda x: x[\"review\"] is not None and x[\"review\"].strip() != \"\" and x[\"label\"] in [0, 1]) "
+                    }
+                ],
+                "code_language": "python"
+            },
+            "bbox": [
+                144,
+                645,
+                752,
+                681
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.3.3 划分数据集"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                690,
+                329,
+                709
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "可使用 .train_test_split() 将单一数据集划分为训练集和验证集："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                725,
+                667,
+                741
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "dataset_dict = dataset.train_test_split(test_size=0.2)  \ntrain_dataset = dataset_dict[\"train\"]  \ntest_dataset = dataset_dict[\"test\"] "
+                    }
+                ],
+                "code_language": "txt"
+            },
+            "bbox": [
+                146,
+                747,
+                673,
+                820
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.3.4 编码数据"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                829,
+                304,
+                848
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "可使用.map()方法与 tokenizer 配合，将原始文本批量编码为模型可用的输入格式（如input_ids、attention_mask、token_type_ids 等）。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                864,
+                848,
+                908
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                923,
+                793,
+                940
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "U "
+                    }
+                ]
+            },
+            "bbox": [
+                147,
+                48,
+                181,
+                73
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷"
+                    }
+                ]
+            },
+            "bbox": [
+                183,
+                51,
+                258,
+                66
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷大模型技术之 Hugging Face 生态"
+                    }
+                ]
+            },
+            "bbox": [
+                457,
+                60,
+                830,
+                77
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": ".map()是 datasets 中的核心方法之一，支持对整个数据集中的每一条样本或每一批样本进行统一处理，常用于文本编码（tokenizer）和数据字段换。.map() 方法基本语法如下：dataset "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "="
+                    },
+                    {
+                        "type": "text",
+                        "content": "dataset.map(function, batched=False, remove_columns=None)"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                93,
+                848,
+                162
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "参数说明如下："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                168,
+                300,
+                184
+            ]
+        },
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/823f5f7988cde5f15eef1d7e80dc3f168b795bbb0ba5ac7322d5467008dd7407.jpg"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "<table><tr><td>参数</td><td>说明</td></tr><tr><td>function</td><td>要应用到每条样本上的函数（或每批样本上的函数）</td></tr><tr><td>batched</td><td>是否以“批”为单位处理样本；若为 True，则每次接收一个样本列表</td></tr><tr><td>remove-columns</td><td>是否删除原始列，常用于清理不再需要的字段</td></tr></table>",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                139,
+                189,
+                858,
+                269
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "以中文 BERT 模型为例，编码流程如下："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                274,
+                502,
+                288
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "tokenizer = AutoTokenizer.from_pretrained(\"bert-base-chinese\")  \ndef tokenizer.example):  \n    encoded = tokenizer(  \n        example[\"review\"],  \n        padding=\"max_length\",  \n        truncation=True,  \n        max_length=128  \n    )  \n    example['input_ids'] = encoded['input_ids']  \n    example['attention_mask'] = encoded['attention_mask']  \n    return example  \ntrain_dataset = train_dataset.map(tokenize, batched=True)  \ntest_dataset = test_dataset.map(tokenize, batched=True) "
+                    }
+                ],
+                "code_language": "python"
+            },
+            "bbox": [
+                144,
+                294,
+                754,
+                592
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "编码后，数据集中将新增字段如 input_ids 和 attention_mask，可直接用于模型训练。"
+                    }
+                ]
+            },
+            "bbox": [
+                179,
+                598,
+                835,
+                614
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.4 保存数据集"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                627,
+                310,
+                646
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "处理后的数据可保存到本地，供后续训练或复用，避免重复预处理。 Datasets 提供了多种保存方式，适用于不同场景："
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                663,
+                847,
+                706
+            ]
+        },
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/623b5ad22e828caa72c37b0abcd0005a2389163d1c233ff7d06d05e3d64f195c.jpg"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "<table><tr><td>数据格式</td><td>保存方法</td><td>适用对象</td></tr><tr><td>Arrow</td><td>save_to_disk()</td><td>Dataset 或 DatasetDict</td></tr><tr><td>CSV</td><td>to_csv()</td><td>仅限 Dataset</td></tr><tr><td>JSON</td><td>to_json()</td><td>仅限 Dataset</td></tr></table>",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                139,
+                711,
+                840,
+                791
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.4.1 Arrow 格式"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                800,
+                331,
+                818
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Arrow 格式是 Hugging Face 官方推荐的数据持久化方式，既支持单个 Dataset 也支持多个子集的 DatasetDict。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                834,
+                848,
+                878
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": " 保存 "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                181,
+                889,
+                258,
+                904
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                923,
+                794,
+                940
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "J尚硅谷"
+                    }
+                ]
+            },
+            "bbox": [
+                147,
+                48,
+                257,
+                74
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷大模型技术之 Hugging Face 生态"
+                    }
+                ]
+            },
+            "bbox": [
+                455,
+                59,
+                831,
+                78
+            ]
+        }
+    ],
+    [
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "dataset_dict.save_to_disk(\"/data/processed\") "
+                    }
+                ],
+                "code_language": "txt"
+            },
+            "bbox": [
+                146,
+                89,
+                584,
+                105
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "保存后的目录结构示例："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                112,
+                369,
+                129
+            ]
+        },
+        {
+            "type": "algorithm",
+            "content": {
+                "algorithm_caption": [],
+                "algorithm_content": [
+                    {
+                        "type": "text",
+                        "content": "processed/  \n "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\vdash"
+                    },
+                    {
+                        "type": "text",
+                        "content": " dataset_dict.json  \n "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\vdash"
+                    },
+                    {
+                        "type": "text",
+                        "content": " test/  \n "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\vdash"
+                    },
+                    {
+                        "type": "text",
+                        "content": " data-00000-of-00001 arrow  \n "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\vdash"
+                    },
+                    {
+                        "type": "text",
+                        "content": " dataset_info.json  \n "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\vdash"
+                    },
+                    {
+                        "type": "text",
+                        "content": " state.json  \n "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\vdash"
+                    },
+                    {
+                        "type": "text",
+                        "content": " train/  \n "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\vdash"
+                    },
+                    {
+                        "type": "text",
+                        "content": " data-00000-of-00001 arrow  \n "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\vdash"
+                    },
+                    {
+                        "type": "text",
+                        "content": " dataset_info.json  \n "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\vdash"
+                    },
+                    {
+                        "type": "text",
+                        "content": " state.json "
+                    }
+                ]
+            },
+            "bbox": [
+                147,
+                134,
+                505,
+                296
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "每个 split（如 train、test）都会单独保存一个 Arrow 文件和相应的元数据。"
+                    }
+                ]
+            },
+            "bbox": [
+                179,
+                302,
+                766,
+                318
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": " 加载 "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                181,
+                330,
+                258,
+                344
+            ]
+        },
+        {
+            "type": "algorithm",
+            "content": {
+                "algorithm_caption": [],
+                "algorithm_content": [
+                    {
+                        "type": "text",
+                        "content": "from datasets import load_from_disk dataset_dict  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "="
+                    },
+                    {
+                        "type": "text",
+                        "content": " load_from_disk(\"/data/processed\") "
+                    }
+                ]
+            },
+            "bbox": [
+                146,
+                353,
+                626,
+                406
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.4.2 CSV 和 JSON 格式"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                416,
+                408,
+                435
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "如果希望将数据导出为通用格式（如用于可视化或非 Hugging Face 工具使用），可以使用 .to_csv() 或 .to_json()方法。但需注意，这些方法仅适用于单个 Dataset，不支持DatasetDict。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                450,
+                847,
+                521
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": " 保存 "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                181,
+                533,
+                258,
+                549
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "# csv\ntrain_dataset.to_csv(\"/data/processed/train.csv\")\n# json\ntrain_dataset.to_json(\"/data/processed/train.json\") "
+                    }
+                ],
+                "code_language": "txt"
+            },
+            "bbox": [
+                144,
+                557,
+                655,
+                646
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": " 加载 "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                181,
+                653,
+                258,
+                669
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "使用 load_dataset()，指定格式和路径即可重新加载："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                681,
+                584,
+                697
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "from datasets import load_dataset\n# 加载 CSV 文件\ndataset_dict = load_dataset(\"csv\",\ndata_files=\"/data/processed/train.csv\")\n# 加载 JSON 文件\ndataset_dict = load_dataset(\"json\",\ndata_files=\"/data/processed/train.json\") "
+                    }
+                ],
+                "code_language": "python"
+            },
+            "bbox": [
+                146,
+                705,
+                547,
+                870
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "加载后返回一个结构完整的 DatasetDict，可直接用于训练、评估等任务。"
+                    }
+                ]
+            },
+            "bbox": [
+                179,
+                876,
+                746,
+                892
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                923,
+                794,
+                940
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "U "
+                    }
+                ]
+            },
+            "bbox": [
+                147,
+                48,
+                181,
+                73
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷"
+                    }
+                ]
+            },
+            "bbox": [
+                183,
+                51,
+                258,
+                66
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷大模型技术之 Hugging Face 生态"
+                    }
+                ]
+            },
+            "bbox": [
+                455,
+                59,
+                830,
+                77
+            ]
+        }
+    ],
+    [
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.5 集成 Dataloader"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                144,
+                98,
+                359,
+                118
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "经过预处理的 datasets.Dataset 对象可以直接与 PyTorch 的 DataLoader 集成使用。虽然它并非继承自 torch.utils.data.Dataset 类，但由于实现了__len__()和__getitem__()这两个核心接口，因此能够被 DataLoader 正确识别并进行批量迭代。"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                131,
+                848,
+                203
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "在使用前，需要通过.set_format()方法将指定字段转换为张量格式以适配模型输入。典型配置如下："
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                215,
+                848,
+                258
+            ]
+        },
+        {
+            "type": "algorithm",
+            "content": {
+                "algorithm_caption": [],
+                "algorithm_content": [
+                    {
+                        "type": "text",
+                        "content": "train_dataset.set_format( type  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "="
+                    },
+                    {
+                        "type": "text",
+                        "content": " \"torch\", #指定输出为PyTorch张量 columns  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "="
+                    },
+                    {
+                        "type": "text",
+                        "content": " [\"input_ids\", \"attention_mask\", \"label\"] #需要转换的字段"
+                    }
+                ]
+            },
+            "bbox": [
+                146,
+                266,
+                816,
+                338
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "需要注意的是："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                344,
+                300,
+                360
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": " 该方法仅改变通过__getitem__()（即 dataset[i]）访问样本时的返回格式，不会修改底层数据存储"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                372,
+                848,
+                414
+            ]
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": " 通过 columns 指定的字段会在访问时自动转换为 torch.Tensor 类型"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": " 未通过 columns 指定的字段在访问时将被自动过滤"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bbox": [
+                179,
+                428,
+                724,
+                470
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "完成格式设置后，即可创建标准的 DataLoader 实例："
+                    }
+                ]
+            },
+            "bbox": [
+                181,
+                483,
+                584,
+                499
+            ]
+        },
+        {
+            "type": "code",
+            "content": {
+                "code_caption": [],
+                "code_content": [
+                    {
+                        "type": "text",
+                        "content": "from torch.utils.data import DataLoader   \n# 训练集 DataLoader   \ntrain_dataloger = DataLoader(train_dataset, batch_size=32, shuffle=True) "
+                    }
+                ],
+                "code_language": "python"
+            },
+            "bbox": [
+                144,
+                507,
+                848,
+                580
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "J尚硅谷"
+                    }
+                ]
+            },
+            "bbox": [
+                147,
+                48,
+                257,
+                73
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "尚硅谷大模型技术之 Hugging Face 生态"
+                    }
+                ]
+            },
+            "bbox": [
+                455,
+                59,
+                831,
+                77
+            ]
+        },
+        {
+            "type": "page_footer",
+            "content": {
+                "page_footer_content": [
+                    {
+                        "type": "text",
+                        "content": "更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网"
+                    }
+                ]
+            },
+            "bbox": [
+                146,
+                923,
+                794,
+                940
+            ]
+        }
+    ]
+]

@@ -1,0 +1,2921 @@
+{
+    "pdf_info": [
+        {
+            "para_blocks": [
+                {
+                    "bbox": [
+                        292,
+                        290,
+                        534,
+                        313
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 1,
+                    "lines": [
+                        {
+                            "bbox": [
+                                290,
+                                288,
+                                534,
+                                314
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        290,
+                                        288,
+                                        534,
+                                        314
+                                    ],
+                                    "type": "text",
+                                    "content": "H3C LA2608 室内无线网关",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        451,
+                        333,
+                        533,
+                        354
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 2,
+                    "lines": [
+                        {
+                            "bbox": [
+                                449,
+                                331,
+                                535,
+                                357
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        449,
+                                        331,
+                                        535,
+                                        357
+                                    ],
+                                    "type": "text",
+                                    "content": "用户手册",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        53,
+                        697,
+                        176,
+                        710
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 3,
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                698,
+                                177,
+                                709
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        698,
+                                        177,
+                                        709
+                                    ],
+                                    "type": "text",
+                                    "content": "杭州华三通信技术有限公司",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        55,
+                        713,
+                        158,
+                        725
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 4,
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                713,
+                                158,
+                                727
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        713,
+                                        158,
+                                        727
+                                    ],
+                                    "type": "text",
+                                    "content": "http://www.h3c.com.cn",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        54,
+                        744,
+                        173,
+                        756
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 5,
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                744,
+                                174,
+                                757
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        744,
+                                        174,
+                                        757
+                                    ],
+                                    "type": "text",
+                                    "content": "资料版本：6W100-20140227",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        445,
+                        102,
+                        535,
+                        129
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "index": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                444,
+                                101,
+                                536,
+                                131
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        444,
+                                        101,
+                                        536,
+                                        131
+                                    ],
+                                    "type": "text",
+                                    "content": "H3C",
+                                    "score": 0.998
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "page_size": [
+                595,
+                842
+            ],
+            "page_idx": 0
+        },
+        {
+            "para_blocks": [
+                {
+                    "bbox": [
+                        84,
+                        65,
+                        474,
+                        79
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                85,
+                                64,
+                                476,
+                                79
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        64,
+                                        133,
+                                        79
+                                    ],
+                                    "type": "text",
+                                    "content": "Copyright",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        134,
+                                        66,
+                                        144,
+                                        77
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "\\circledcirc",
+                                    "score": 0.65
+                                },
+                                {
+                                    "bbox": [
+                                        145,
+                                        64,
+                                        476,
+                                        79
+                                    ],
+                                    "type": "text",
+                                    "content": "2014 杭州华三通信技术有限公司及其许可者 版权所有，保留一切权利。",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        84,
+                        85,
+                        538,
+                        113
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 1,
+                    "lines": [
+                        {
+                            "bbox": [
+                                88,
+                                85,
+                                539,
+                                96
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        85,
+                                        539,
+                                        96
+                                    ],
+                                    "type": "text",
+                                    "content": "未经本公司书面许可，任何单位和个人不得擅自摘抄、复制本书内容的部分或全部，并不得以任何",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                86,
+                                101,
+                                136,
+                                113
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        86,
+                                        101,
+                                        136,
+                                        113
+                                    ],
+                                    "type": "text",
+                                    "content": "形式传播。",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        84,
+                        119,
+                        539,
+                        212
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 2,
+                    "lines": [
+                        {
+                            "bbox": [
+                                383,
+                                125,
+                                410,
+                                141
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        383,
+                                        125,
+                                        410,
+                                        141
+                                    ],
+                                    "type": "text",
+                                    "content": "TOPG",
+                                    "score": 0.986
+                                },
+                                {
+                                    "bbox": [
+                                        391,
+                                        125,
+                                        403,
+                                        130
+                                    ],
+                                    "type": "text",
+                                    "content": "weredhy",
+                                    "score": 0.754
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                85,
+                                127,
+                                539,
+                                149
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        132,
+                                        198,
+                                        148
+                                    ],
+                                    "type": "text",
+                                    "content": "H3C、 、Aolynk、",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        204,
+                                        128,
+                                        293,
+                                        149
+                                    ],
+                                    "type": "text",
+                                    "content": "、H3 Care、",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        303,
+                                        127,
+                                        323,
+                                        140
+                                    ],
+                                    "type": "text",
+                                    "content": "W'care",
+                                    "score": 0.74
+                                },
+                                {
+                                    "bbox": [
+                                        331,
+                                        132,
+                                        377,
+                                        147
+                                    ],
+                                    "type": "text",
+                                    "content": "、TOP G、",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        402,
+                                        132,
+                                        539,
+                                        148
+                                    ],
+                                    "type": "text",
+                                    "content": "、IRF、NetPilot、Neocean、",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                85,
+                                151,
+                                534,
+                                165
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        151,
+                                        534,
+                                        165
+                                    ],
+                                    "type": "text",
+                                    "content": "NeoVTL、SecPro、SecPoint、SecEngine、SecPath、Comware、Secware、Storware、NQA、",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                85,
+                                165,
+                                539,
+                                181
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        165,
+                                        539,
+                                        181
+                                    ],
+                                    "type": "text",
+                                    "content": "VVG、V2 G、Vn G、PSPT、XGbus、N-Bus、TiGem、InnoVision、HUASAN、华三均为杭州华三",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                85,
+                                181,
+                                540,
+                                196
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        181,
+                                        540,
+                                        196
+                                    ],
+                                    "type": "text",
+                                    "content": "通信技术有限公司的商标。对于本手册中出现的其它公司的商标、产品标识及商品名称，由各自权",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                85,
+                                197,
+                                136,
+                                212
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        197,
+                                        136,
+                                        212
+                                    ],
+                                    "type": "text",
+                                    "content": "利人拥有。",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        84,
+                        217,
+                        539,
+                        278
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 3,
+                    "lines": [
+                        {
+                            "bbox": [
+                                88,
+                                218,
+                                538,
+                                229
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        218,
+                                        538,
+                                        229
+                                    ],
+                                    "type": "text",
+                                    "content": "由于产品版本升级或其他原因，本手册内容有可能变更。H3C保留在没有任何通知或者提示的情况",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                88,
+                                234,
+                                537,
+                                244
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        234,
+                                        537,
+                                        244
+                                    ],
+                                    "type": "text",
+                                    "content": "下对本手册的内容进行修改的权利。本手册仅作为使用指导，H3C尽全力在本手册中提供准确的信",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                88,
+                                250,
+                                538,
+                                261
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        250,
+                                        538,
+                                        261
+                                    ],
+                                    "type": "text",
+                                    "content": "息，但是 H3C 并不确保手册内容完全没有错误，本手册中的所有陈述、信息和建议也不构成任何",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                88,
+                                265,
+                                178,
+                                277
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        265,
+                                        178,
+                                        277
+                                    ],
+                                    "type": "text",
+                                    "content": "明示或暗示的担保。",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "discarded_blocks": [],
+            "page_size": [
+                595,
+                842
+            ],
+            "page_idx": 1
+        },
+        {
+            "para_blocks": [
+                {
+                    "bbox": [
+                        274,
+                        67,
+                        321,
+                        87
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                271,
+                                65,
+                                324,
+                                91
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        271,
+                                        65,
+                                        324,
+                                        91
+                                    ],
+                                    "type": "text",
+                                    "content": "目 录",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        55,
+                        108,
+                        537,
+                        122
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 1,
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                109,
+                                234,
+                                122
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        109,
+                                        234,
+                                        122
+                                    ],
+                                    "type": "text",
+                                    "content": "1 H3C LA2608 室内无线网关用户手册",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        76,
+                        127,
+                        537,
+                        159
+                    ],
+                    "type": "list",
+                    "angle": 0,
+                    "index": 4,
+                    "blocks": [
+                        {
+                            "bbox": [
+                                76,
+                                127,
+                                537,
+                                141
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "index": 2,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        74,
+                                        126,
+                                        128,
+                                        141
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                74,
+                                                126,
+                                                119,
+                                                141
+                                            ],
+                                            "type": "text",
+                                            "content": "1.1 概述 ·",
+                                            "score": 1.0
+                                        },
+                                        {
+                                            "bbox": [
+                                                116,
+                                                131,
+                                                128,
+                                                136
+                                            ],
+                                            "type": "text",
+                                            "content": "···",
+                                            "score": 1.0
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                76,
+                                146,
+                                537,
+                                159
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "index": 3,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        76,
+                                        146,
+                                        235,
+                                        159
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                76,
+                                                146,
+                                                235,
+                                                159
+                                            ],
+                                            "type": "text",
+                                            "content": "1.2 配置LA2608 与无线控制器互通 ·",
+                                            "score": 1.0
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "sub_type": "text"
+                },
+                {
+                    "bbox": [
+                        97,
+                        165,
+                        537,
+                        215
+                    ],
+                    "type": "list",
+                    "angle": 0,
+                    "index": 8,
+                    "blocks": [
+                        {
+                            "bbox": [
+                                97,
+                                165,
+                                537,
+                                178
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "index": 5,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        97,
+                                        166,
+                                        533,
+                                        177
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                97,
+                                                166,
+                                                193,
+                                                177
+                                            ],
+                                            "type": "text",
+                                            "content": "1.2.1 配置LA2608 ·····",
+                                            "score": 1.0
+                                        },
+                                        {
+                                            "bbox": [
+                                                520,
+                                                169,
+                                                533,
+                                                173
+                                            ],
+                                            "type": "text",
+                                            "content": "",
+                                            "score": 1.0
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                97,
+                                183,
+                                537,
+                                197
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "index": 6,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        97,
+                                        184,
+                                        537,
+                                        197
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                97,
+                                                184,
+                                                224,
+                                                197
+                                            ],
+                                            "type": "text",
+                                            "content": "1.2.2 配置运营商无线控制器",
+                                            "score": 1.0
+                                        },
+                                        {
+                                            "bbox": [
+                                                520,
+                                                185,
+                                                537,
+                                                196
+                                            ],
+                                            "type": "text",
+                                            "content": "···· 2",
+                                            "score": 1.0
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                98,
+                                202,
+                                537,
+                                215
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "index": 7,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        96,
+                                        202,
+                                        537,
+                                        214
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                96,
+                                                202,
+                                                282,
+                                                214
+                                            ],
+                                            "type": "text",
+                                            "content": "1.2.3 验证LA2608 与无线控制器是否连通",
+                                            "score": 1.0
+                                        },
+                                        {
+                                            "bbox": [
+                                                528,
+                                                205,
+                                                537,
+                                                213
+                                            ],
+                                            "type": "text",
+                                            "content": "· 3",
+                                            "score": 1.0
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "sub_type": "text"
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        294,
+                        799,
+                        299,
+                        807
+                    ],
+                    "type": "page_number",
+                    "angle": 0,
+                    "index": 9,
+                    "lines": [
+                        {
+                            "bbox": [
+                                294,
+                                799,
+                                299,
+                                808
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        294,
+                                        799,
+                                        299,
+                                        808
+                                    ],
+                                    "type": "text",
+                                    "content": "i",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "page_size": [
+                595,
+                842
+            ],
+            "page_idx": 2
+        },
+        {
+            "para_blocks": [
+                {
+                    "bbox": [
+                        54,
+                        52,
+                        364,
+                        71
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                49,
+                                365,
+                                73
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        49,
+                                        365,
+                                        73
+                                    ],
+                                    "type": "text",
+                                    "content": "1 H3C LA2608 室内无线网关用户手册",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        54,
+                        86,
+                        117,
+                        103
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 1,
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                85,
+                                118,
+                                106
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        85,
+                                        118,
+                                        106
+                                    ],
+                                    "type": "text",
+                                    "content": "1.1 概述",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        84,
+                        117,
+                        540,
+                        147
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 2,
+                    "lines": [
+                        {
+                            "bbox": [
+                                86,
+                                119,
+                                537,
+                                131
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        86,
+                                        119,
+                                        537,
+                                        131
+                                    ],
+                                    "type": "text",
+                                    "content": "H3C LA2608-GM/GU 室内无线网关（以下简称 LA2608）可以为用户提供无线服务，为了实现对",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                86,
+                                134,
+                                409,
+                                147
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        86,
+                                        134,
+                                        409,
+                                        147
+                                    ],
+                                    "type": "text",
+                                    "content": "设备的管理，LA2608 需要通过 3G/4G 网络连接到运营商无线控制器。",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        87,
+                        159,
+                        110,
+                        179
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                87,
+                                159,
+                                110,
+                                179
+                            ],
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        87,
+                                        159,
+                                        110,
+                                        179
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                159,
+                                                110,
+                                                179
+                                            ],
+                                            "type": "image",
+                                            "image_path": "07645668bfab67e81bac47a7c5f603401426be1b3216242f586546808fc27dab.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 3,
+                            "angle": 0,
+                            "type": "image_body"
+                        }
+                    ],
+                    "index": 3
+                },
+                {
+                    "bbox": [
+                        112,
+                        167,
+                        133,
+                        179
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 4,
+                    "lines": [
+                        {
+                            "bbox": [
+                                110,
+                                166,
+                                136,
+                                181
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        110,
+                                        166,
+                                        136,
+                                        181
+                                    ],
+                                    "type": "text",
+                                    "content": "说明",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        85,
+                        189,
+                        334,
+                        202
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 5,
+                    "lines": [
+                        {
+                            "bbox": [
+                                86,
+                                189,
+                                336,
+                                203
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        86,
+                                        189,
+                                        336,
+                                        203
+                                    ],
+                                    "type": "text",
+                                    "content": "目前，LA2608 只支持与 H3C 公司的无线控制器互通。",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        54,
+                        238,
+                        288,
+                        255
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 6,
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                238,
+                                289,
+                                255
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        238,
+                                        289,
+                                        255
+                                    ],
+                                    "type": "text",
+                                    "content": "1.2 配置LA2608与无线控制器互通",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        84,
+                        270,
+                        540,
+                        299
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 7,
+                    "lines": [
+                        {
+                            "bbox": [
+                                86,
+                                270,
+                                538,
+                                282
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        86,
+                                        270,
+                                        538,
+                                        282
+                                    ],
+                                    "type": "text",
+                                    "content": "如 图 1 所示，LA2608 安装了SIM卡，通过 3G/4G网络连接到运营商无线控制器，并向用户提供",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                86,
+                                287,
+                                506,
+                                298
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        86,
+                                        287,
+                                        506,
+                                        298
+                                    ],
+                                    "type": "text",
+                                    "content": "无线服务。关于LA2608的安装方法，请参见“H3C LA2608室内无线网关 快速安装指南”。",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        88,
+                        329,
+                        483,
+                        492
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                85,
+                                305,
+                                256,
+                                319
+                            ],
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        86,
+                                        305,
+                                        255,
+                                        319
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                86,
+                                                305,
+                                                255,
+                                                319
+                                            ],
+                                            "type": "text",
+                                            "content": "图1 配置 LA2608 与无线控制器互通",
+                                            "score": 1.0
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 8,
+                            "angle": 0,
+                            "type": "image_caption"
+                        },
+                        {
+                            "bbox": [
+                                88,
+                                329,
+                                483,
+                                492
+                            ],
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        329,
+                                        483,
+                                        492
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                88,
+                                                329,
+                                                483,
+                                                492
+                                            ],
+                                            "type": "image",
+                                            "image_path": "25307ddba26964ba7daa9dc6a1251a551313cc2a981ab84e8f9c0a0814a016fa.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 9,
+                            "angle": 0,
+                            "type": "image_body"
+                        }
+                    ],
+                    "index": 9
+                },
+                {
+                    "bbox": [
+                        54,
+                        527,
+                        155,
+                        541
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 10,
+                    "lines": [
+                        {
+                            "bbox": [
+                                56,
+                                528,
+                                155,
+                                541
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        56,
+                                        528,
+                                        155,
+                                        541
+                                    ],
+                                    "type": "text",
+                                    "content": "1.2.1 配置LA2608",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        85,
+                        555,
+                        261,
+                        569
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 11,
+                    "lines": [
+                        {
+                            "bbox": [
+                                85,
+                                555,
+                                262,
+                                572
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        555,
+                                        262,
+                                        572
+                                    ],
+                                    "type": "text",
+                                    "content": "(1) 配置拨号访问组的拨号控制列表",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "bbox": [
+                        85,
+                        575,
+                        185,
+                        586
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                85,
+                                575,
+                                185,
+                                586
+                            ],
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        575,
+                                        185,
+                                        586
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                85,
+                                                575,
+                                                185,
+                                                586
+                                            ],
+                                            "type": "text",
+                                            "content": "<LA2608>system-view"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 12,
+                            "angle": 0,
+                            "type": "code_body"
+                        }
+                    ],
+                    "index": 12,
+                    "sub_type": "code",
+                    "guess_lang": "txt"
+                },
+                {
+                    "type": "code",
+                    "bbox": [
+                        87,
+                        589,
+                        246,
+                        601
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                87,
+                                589,
+                                246,
+                                601
+                            ],
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        87,
+                                        589,
+                                        246,
+                                        601
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                589,
+                                                246,
+                                                601
+                                            ],
+                                            "type": "text",
+                                            "content": "[LA2608]dialer-rule 1 ip permit"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 13,
+                            "angle": 0,
+                            "type": "code_body"
+                        }
+                    ],
+                    "index": 13,
+                    "sub_type": "code",
+                    "guess_lang": "txt"
+                },
+                {
+                    "bbox": [
+                        85,
+                        603,
+                        182,
+                        617
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 14,
+                    "lines": [
+                        {
+                            "bbox": [
+                                85,
+                                602,
+                                184,
+                                619
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        602,
+                                        184,
+                                        619
+                                    ],
+                                    "type": "text",
+                                    "content": "(2) 配置 DCC 拨号",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        87,
+                        630,
+                        110,
+                        649
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                87,
+                                630,
+                                110,
+                                649
+                            ],
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        87,
+                                        630,
+                                        110,
+                                        649
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                630,
+                                                110,
+                                                649
+                                            ],
+                                            "type": "image",
+                                            "image_path": "39057cd15c7479a2fd918c53f2da062a7b3267cb4e170eaca2cd78b335a1f787.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 15,
+                            "angle": 0,
+                            "type": "image_body"
+                        }
+                    ],
+                    "index": 15
+                },
+                {
+                    "bbox": [
+                        112,
+                        637,
+                        134,
+                        650
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 16,
+                    "lines": [
+                        {
+                            "bbox": [
+                                111,
+                                635,
+                                136,
+                                653
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        111,
+                                        635,
+                                        136,
+                                        653
+                                    ],
+                                    "type": "text",
+                                    "content": "说明",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        84,
+                        658,
+                        540,
+                        687
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 17,
+                    "lines": [
+                        {
+                            "bbox": [
+                                86,
+                                659,
+                                537,
+                                671
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        86,
+                                        659,
+                                        537,
+                                        671
+                                    ],
+                                    "type": "text",
+                                    "content": "dialer number命令用来配置发起呼叫的拨号串，不同运营商的拨号串不同，请用户在配置前向网",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                86,
+                                675,
+                                239,
+                                687
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        86,
+                                        675,
+                                        239,
+                                        687
+                                    ],
+                                    "type": "text",
+                                    "content": "络运营商获取发起呼叫的拨号串。",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "bbox": [
+                        86,
+                        716,
+                        384,
+                        783
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                86,
+                                716,
+                                384,
+                                783
+                            ],
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        86,
+                                        716,
+                                        384,
+                                        783
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                86,
+                                                716,
+                                                384,
+                                                783
+                                            ],
+                                            "type": "text",
+                                            "content": "[LA2608]interface Cellular-Ethernet2/0  \n[LA2608-Cellular-Ethernet2/0]ip address cellular-allocated  \n[LA2608-Cellular-Ethernet2/0]dialer enable-circular  \n[LA2608-Cellular-Ethernet2/0]dialer-group 1  \n[LA2608-Cellular-Ethernet2/0]dialer timer idle 0"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 18,
+                            "angle": 0,
+                            "type": "code_body"
+                        }
+                    ],
+                    "index": 18,
+                    "sub_type": "code",
+                    "guess_lang": "powershell"
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        301,
+                        799,
+                        307,
+                        807
+                    ],
+                    "type": "page_number",
+                    "angle": 0,
+                    "index": 19,
+                    "lines": [
+                        {
+                            "bbox": [
+                                300,
+                                799,
+                                308,
+                                809
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        300,
+                                        799,
+                                        308,
+                                        809
+                                    ],
+                                    "type": "text",
+                                    "content": "1",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "page_size": [
+                595,
+                842
+            ],
+            "page_idx": 3
+        },
+        {
+            "para_blocks": [
+                {
+                    "type": "code",
+                    "bbox": [
+                        86,
+                        43,
+                        373,
+                        97
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                86,
+                                43,
+                                373,
+                                97
+                            ],
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        86,
+                                        43,
+                                        373,
+                                        97
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                86,
+                                                43,
+                                                373,
+                                                97
+                                            ],
+                                            "type": "text",
+                                            "content": "[LA2608-Cellular-Ethernet2/0]dialer timer autodial 5  \n[LA2608-Cellular-Ethernet2/0]dialer number *99# autodial  \n[LA2608-Cellular-Ethernet2/0]nat outbound  \n[LA2608-Cellular-Ethernet2/0]quit"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 0,
+                            "angle": 0,
+                            "type": "code_body"
+                        }
+                    ],
+                    "index": 0,
+                    "sub_type": "code",
+                    "guess_lang": "powershell"
+                },
+                {
+                    "bbox": [
+                        85,
+                        100,
+                        204,
+                        112
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 1,
+                    "lines": [
+                        {
+                            "bbox": [
+                                85,
+                                98,
+                                205,
+                                115
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        98,
+                                        205,
+                                        115
+                                    ],
+                                    "type": "text",
+                                    "content": "(3) 配置 DNS 解析功能",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "bbox": [
+                        86,
+                        119,
+                        185,
+                        129
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                86,
+                                119,
+                                185,
+                                129
+                            ],
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        86,
+                                        119,
+                                        185,
+                                        129
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                86,
+                                                119,
+                                                185,
+                                                129
+                                            ],
+                                            "type": "text",
+                                            "content": "[LA2608]dns resolve"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 2,
+                            "angle": 0,
+                            "type": "code_body"
+                        }
+                    ],
+                    "index": 2,
+                    "sub_type": "code",
+                    "guess_lang": "txt"
+                },
+                {
+                    "bbox": [
+                        85,
+                        133,
+                        176,
+                        146
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 3,
+                    "lines": [
+                        {
+                            "bbox": [
+                                85,
+                                132,
+                                178,
+                                149
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        132,
+                                        178,
+                                        149
+                                    ],
+                                    "type": "text",
+                                    "content": "(4) 配置静态路由",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "bbox": [
+                        86,
+                        153,
+                        393,
+                        164
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                86,
+                                153,
+                                393,
+                                164
+                            ],
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        86,
+                                        153,
+                                        393,
+                                        164
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                86,
+                                                153,
+                                                393,
+                                                164
+                                            ],
+                                            "type": "text",
+                                            "content": "[LA2608]ip route-static 0.0.0.0 0.0.0.0 Cellular-Ethernet2/0"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 4,
+                            "angle": 0,
+                            "type": "code_body"
+                        }
+                    ],
+                    "index": 4,
+                    "sub_type": "code",
+                    "guess_lang": "txt"
+                },
+                {
+                    "bbox": [
+                        85,
+                        167,
+                        264,
+                        180
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 5,
+                    "lines": [
+                        {
+                            "bbox": [
+                                85,
+                                166,
+                                266,
+                                183
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        166,
+                                        266,
+                                        183
+                                    ],
+                                    "type": "text",
+                                    "content": "(5) 指定运营商无线控制器的 IP 地址",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "bbox": [
+                        86,
+                        186,
+                        255,
+                        197
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                86,
+                                186,
+                                255,
+                                197
+                            ],
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        86,
+                                        186,
+                                        255,
+                                        197
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                86,
+                                                186,
+                                                255,
+                                                197
+                                            ],
+                                            "type": "text",
+                                            "content": "[LA2608] wlan ac ip 60.191.99.143"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 6,
+                            "angle": 0,
+                            "type": "code_body"
+                        }
+                    ],
+                    "index": 6,
+                    "sub_type": "code",
+                    "guess_lang": "txt"
+                },
+                {
+                    "bbox": [
+                        54,
+                        209,
+                        210,
+                        223
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 7,
+                    "lines": [
+                        {
+                            "bbox": [
+                                56,
+                                211,
+                                210,
+                                223
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        56,
+                                        211,
+                                        210,
+                                        223
+                                    ],
+                                    "type": "text",
+                                    "content": "1.2.2 配置运营商无线控制器",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        86,
+                        245,
+                        110,
+                        264
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                86,
+                                245,
+                                110,
+                                264
+                            ],
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        86,
+                                        245,
+                                        110,
+                                        264
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                86,
+                                                245,
+                                                110,
+                                                264
+                                            ],
+                                            "type": "image",
+                                            "image_path": "8ca3c3627f4ec48e0ec841e036f5ba63e3476d2417c3e8a168e49f82496c18a8.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 8,
+                            "angle": 0,
+                            "type": "image_body"
+                        }
+                    ],
+                    "index": 8
+                },
+                {
+                    "bbox": [
+                        112,
+                        251,
+                        135,
+                        264
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 9,
+                    "lines": [
+                        {
+                            "bbox": [
+                                111,
+                                250,
+                                136,
+                                267
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        111,
+                                        250,
+                                        136,
+                                        267
+                                    ],
+                                    "type": "text",
+                                    "content": "说明",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        85,
+                        273,
+                        333,
+                        286
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 10,
+                    "lines": [
+                        {
+                            "bbox": [
+                                86,
+                                273,
+                                334,
+                                287
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        86,
+                                        273,
+                                        334,
+                                        287
+                                    ],
+                                    "type": "text",
+                                    "content": "如下配置仅供参考，运营商可根据实际情况进行调整。",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        85,
+                        315,
+                        186,
+                        328
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 11,
+                    "lines": [
+                        {
+                            "bbox": [
+                                85,
+                                314,
+                                188,
+                                332
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        314,
+                                        188,
+                                        332
+                                    ],
+                                    "type": "text",
+                                    "content": "(1) 创建业务 VLAN",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "bbox": [
+                        85,
+                        335,
+                        164,
+                        373
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                85,
+                                335,
+                                164,
+                                373
+                            ],
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        335,
+                                        164,
+                                        373
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                85,
+                                                335,
+                                                164,
+                                                373
+                                            ],
+                                            "type": "text",
+                                            "content": "<AC>system-view  \n[AC]vlan 2  \n[AC-vlan2] quit"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 12,
+                            "angle": 0,
+                            "type": "code_body"
+                        }
+                    ],
+                    "index": 12,
+                    "sub_type": "code",
+                    "guess_lang": "objectivec"
+                },
+                {
+                    "bbox": [
+                        85,
+                        377,
+                        298,
+                        389
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 13,
+                    "lines": [
+                        {
+                            "bbox": [
+                                85,
+                                376,
+                                299,
+                                393
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        376,
+                                        299,
+                                        393
+                                    ],
+                                    "type": "text",
+                                    "content": "(2) 创建 WLAN-ESS 接口并加入业务 VLAN",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "bbox": [
+                        86,
+                        397,
+                        251,
+                        435
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                86,
+                                397,
+                                251,
+                                435
+                            ],
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        86,
+                                        397,
+                                        251,
+                                        435
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                86,
+                                                397,
+                                                251,
+                                                435
+                                            ],
+                                            "type": "text",
+                                            "content": "[AC]interfaceWLAN-ESS1   \n[AC-WLAN-ESS1]portaccessvlan2   \n[AC-WLAN-ESS1]quit"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 14,
+                            "angle": 0,
+                            "type": "code_body"
+                        }
+                    ],
+                    "index": 14,
+                    "sub_type": "code",
+                    "guess_lang": "objectivec"
+                },
+                {
+                    "bbox": [
+                        85,
+                        439,
+                        228,
+                        452
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 15,
+                    "lines": [
+                        {
+                            "bbox": [
+                                85,
+                                437,
+                                230,
+                                455
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        437,
+                                        230,
+                                        455
+                                    ],
+                                    "type": "text",
+                                    "content": "(3) 配置明文方式的服务模板",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "bbox": [
+                        86,
+                        458,
+                        276,
+                        538
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                86,
+                                458,
+                                276,
+                                538
+                            ],
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        86,
+                                        458,
+                                        276,
+                                        538
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                86,
+                                                458,
+                                                276,
+                                                538
+                                            ],
+                                            "type": "text",
+                                            "content": "[AC]wlan service-template 1 clear  \n[AC-wlan-st-1]ssid ssidh3c  \n[AC-wlan-st-1]bind WLAN-ESS 1  \n[AC-wlan-st-1]service-template enable  \nPlease wait... Done.  \n[AC-wlan-st-1]quit"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 16,
+                            "angle": 0,
+                            "type": "code_body"
+                        }
+                    ],
+                    "index": 16,
+                    "sub_type": "code",
+                    "guess_lang": "txt"
+                },
+                {
+                    "bbox": [
+                        85,
+                        543,
+                        195,
+                        555
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 17,
+                    "lines": [
+                        {
+                            "bbox": [
+                                85,
+                                541,
+                                197,
+                                559
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        541,
+                                        197,
+                                        559
+                                    ],
+                                    "type": "text",
+                                    "content": "(4) 开启自动 AP 功能",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "bbox": [
+                        86,
+                        562,
+                        307,
+                        671
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                86,
+                                562,
+                                307,
+                                671
+                            ],
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        86,
+                                        562,
+                                        307,
+                                        671
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                86,
+                                                562,
+                                                307,
+                                                671
+                                            ],
+                                            "type": "text",
+                                            "content": "[AC]wlan auto-ap enable  \n[AC]wlan ap 2608 model LA2608 id 1  \n[AC-wlan-ap-2608]serial-id auto  \n[AC-wlan-ap-2608]radio 1  \n[AC-wlan-ap-2608-radio-1]service-template 1  \n[AC-wlan-ap-2608-radio-1]radio enable  \n[AC-wlan-ap-2608-radio-1]quit  \n[AC-wlan-ap-2608]quit"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 18,
+                            "angle": 0,
+                            "type": "code_body"
+                        }
+                    ],
+                    "index": 18,
+                    "sub_type": "code",
+                    "guess_lang": "objectivec"
+                },
+                {
+                    "bbox": [
+                        85,
+                        674,
+                        223,
+                        687
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 19,
+                    "lines": [
+                        {
+                            "bbox": [
+                                84,
+                                672,
+                                226,
+                                691
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        672,
+                                        226,
+                                        691
+                                    ],
+                                    "type": "text",
+                                    "content": "(5) 配置 VLAN 接口 IP 地址",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "bbox": [
+                        86,
+                        694,
+                        378,
+                        775
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                86,
+                                694,
+                                378,
+                                775
+                            ],
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        86,
+                                        694,
+                                        378,
+                                        775
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                86,
+                                                694,
+                                                378,
+                                                775
+                                            ],
+                                            "type": "text",
+                                            "content": "[AC]interface Vlan-interface 1   \n[AC-Vlan-interface1]ip address 60.191.99.143 255.255.0.0   \n[AC-Vlan-interface1]quit   \n[AC]interface Vlan-interface 2   \n[AC-Vlan-interface2]ip address 10.249.136.1 255.255.252.0   \n[AC-Vlan-interface2]quit"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 20,
+                            "angle": 0,
+                            "type": "code_body"
+                        }
+                    ],
+                    "index": 20,
+                    "sub_type": "code",
+                    "guess_lang": "txt"
+                },
+                {
+                    "bbox": [
+                        85,
+                        778,
+                        287,
+                        791
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 21,
+                    "lines": [
+                        {
+                            "bbox": [
+                                85,
+                                777,
+                                289,
+                                794
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        777,
+                                        289,
+                                        794
+                                    ],
+                                    "type": "text",
+                                    "content": "(6) 使能 DHCP 服务，配置 DHCP 地址池",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        301,
+                        799,
+                        307,
+                        807
+                    ],
+                    "type": "page_number",
+                    "angle": 0,
+                    "index": 22,
+                    "lines": []
+                }
+            ],
+            "page_size": [
+                595,
+                842
+            ],
+            "page_idx": 4
+        },
+        {
+            "para_blocks": [
+                {
+                    "type": "code",
+                    "bbox": [
+                        86,
+                        43,
+                        317,
+                        126
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                86,
+                                43,
+                                317,
+                                126
+                            ],
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        86,
+                                        43,
+                                        317,
+                                        126
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                86,
+                                                43,
+                                                317,
+                                                126
+                                            ],
+                                            "type": "text",
+                                            "content": "[AC]dhcp enable  \n[AC]dhcp server ip-pool vlan2  \n[AC-dhcp-pool-vlan1]network 10.249.136.0 22  \n[AC-dhcp-pool-vlan1]gateway-list 10.249.136.1  \n[AC-dhcp-pool-vlan1]dns-list 218.201.96.130  \n[AC-dhcp-pool-vlan1]quit"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 0,
+                            "angle": 0,
+                            "type": "code_body"
+                        }
+                    ],
+                    "index": 0,
+                    "sub_type": "code",
+                    "guess_lang": "txt"
+                },
+                {
+                    "bbox": [
+                        54,
+                        137,
+                        279,
+                        152
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 1,
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                137,
+                                277,
+                                151
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        137,
+                                        277,
+                                        151
+                                    ],
+                                    "type": "text",
+                                    "content": "1.2.3 验证LA2608 与无线控制器是否连通",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        84,
+                        165,
+                        540,
+                        193
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 2,
+                    "lines": [
+                        {
+                            "bbox": [
+                                86,
+                                165,
+                                539,
+                                179
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        86,
+                                        165,
+                                        539,
+                                        179
+                                    ],
+                                    "type": "text",
+                                    "content": "在无线控制器上执行 display wlan ap 命令，state 字段显示为“R/M”，表示 LA2608 与无线控制",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                86,
+                                181,
+                                188,
+                                194
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        86,
+                                        181,
+                                        188,
+                                        194
+                                    ],
+                                    "type": "text",
+                                    "content": "器之间已经建立连接。",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "bbox": [
+                        85,
+                        200,
+                        497,
+                        378
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                85,
+                                200,
+                                497,
+                                378
+                            ],
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        200,
+                                        497,
+                                        378
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                85,
+                                                200,
+                                                497,
+                                                378
+                                            ],
+                                            "type": "text",
+                                            "content": "< Sysname> display wlan ap all  \nTotal Number of APs configured : 1  \nTotal Number of configured APs connected : 1  \nTotal Number of auto APs connected : 0  \nAP Profiles  \nState : I = Idle, J = Join, JA = JoinAck, IL = ImageLoad  \nC = Config, R = Run, KU = KeyUpdate, KC = KeyCfm  \nM = Master, B = Backup  \nAP Name State Model Serial-ID  \nap1 R/M LA2608 036286A054000033"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 3,
+                            "angle": 0,
+                            "type": "code_body"
+                        }
+                    ],
+                    "index": 3,
+                    "sub_type": "code",
+                    "guess_lang": "txt"
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        301,
+                        799,
+                        307,
+                        808
+                    ],
+                    "type": "page_number",
+                    "angle": 0,
+                    "index": 4,
+                    "lines": []
+                }
+            ],
+            "page_size": [
+                595,
+                842
+            ],
+            "page_idx": 5
+        }
+    ],
+    "_backend": "hybrid",
+    "_ocr_enable": false,
+    "_vlm_ocr_enable": false,
+    "_version_name": "2.7.6"
+}

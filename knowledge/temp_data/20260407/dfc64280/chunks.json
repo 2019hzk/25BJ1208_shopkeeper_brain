@@ -1,0 +1,392 @@
+[
+  {
+    "content": "# 尚硅谷大模型技术之 Hugging Face 生态\n\n\n（作者：尚硅谷研究院）\n\n版本：V1.0.1\n",
+    "title": "# 尚硅谷大模型技术之 Hugging Face 生态",
+    "parent_title": "# 尚硅谷大模型技术之 Hugging Face 生态",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 第 1 章 Hugging Face 生态概览\n\n",
+    "title": "# 第 1 章 Hugging Face 生态概览",
+    "parent_title": "# 第 1 章 Hugging Face 生态概览",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 1.1 简介\n\n\nHugging Face 是一家提供开源 AI 工具和平台的公司，致力于简化预训练模型的使用，加速机器学习项目的开发与落地。\n\n最初以 Transformers 库闻名，该库极大地降低了使用 BERT、GPT、T5 等模型的门槛。如今，Hugging Face 已发展成为一个完整的 AI 开发生态系统，支持自然语言处理、计算机视觉、语音处理、多模态任务等多个领域。\n\nHugging Face 的生态系统主要由两个核心部分组成：\n",
+    "title": "# 1.1 简介",
+    "parent_title": "# 1.1 简介",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 1）Hugging Face Hub\n\n\nHugging Face 提供了一个集中式的开源平台，用于托管和分享模型、数据集和应用。\n\n![暂无图片描述](http://192.168.200.145:9000/knowledge-base-v1/尚硅谷大模型技术之Hugging Face生态/177ee46b46d5197c04a1fcb61eec2a37220b94391b3052b658110bfd5f19a886.jpg)\n\n官网地址为：https://huggingface.co/\n\n国内镜像地址为：https://hf-mirror.com/\n",
+    "title": "# 1）Hugging Face Hub",
+    "parent_title": "# 1）Hugging Face Hub",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 2）工具链（Libraries）\n\n\nHugging Face 提供了一套围绕预训练模型构建的工具库。这些组件彼此独立，又可以协同工作，覆盖了从数据处理到模型训练与推理的完整流程。\n\nDatasets>Tokenizers Transformers\n\n各组件具体功能如下：\n",
+    "title": "# 2）工具链（Libraries）",
+    "parent_title": "# 2）工具链（Libraries）",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "#  Datasets\n\n\nDatasets 是用于加载和处理数据集的工具库。支持从在线仓库或本地文件（如 CSV、JSON）加载文本数据，并支持清洗、编码、切分等预处理操作。处理后的数据可直接用于模型训练，是连接原始数据与模型输入的重要桥梁。\n",
+    "title": "#  Datasets",
+    "parent_title": "#  Datasets",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "#  Tokenizers\n\n\nTokenizers 是用于将文本转换为模型输入的工具。它支持文本分词、编码为 token ID，同时自动处理特殊符号、填充（padding）、attention mask 和句子对标记（token type ID）。分词器通常与模型配套使用，可通过统一接口加载。\n",
+    "title": "#  Tokenizers",
+    "parent_title": "#  Tokenizers",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "#  Transformers\n\n\nTransformers 是 Hugging Face 最核心的库，用于加载、使用和微调各种预训练模型。该库统一了模型接口，支持数百种模型结构，如 BERT、GPT 等，用户可以通过一行代码from_pretrained()直接加载公开模型，快速用于推理或训练。\n",
+    "title": "#  Transformers",
+    "parent_title": "#  Transformers",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 第 2 章 预训练模型的加载与使用\n\n",
+    "title": "# 第 2 章 预训练模型的加载与使用",
+    "parent_title": "# 第 2 章 预训练模型的加载与使用",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 2.1 模型加载详解\n\n",
+    "title": "# 2.1 模型加载详解",
+    "parent_title": "# 2.1 模型加载详解",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 2.1.1 AutoModel 类\n\n\n在使用 Hugging Face 生态中的预训练模型时，第一步往往是从 Hub 上选择一个合适的模型，然后将其加载到本地进行微调或推理。为了简化这一流程，Transformers 库提供了统一的模型加载接口——AutoModel，用于自动下载和加载模型。\n\n具体代码如下：\n\nfrom transformers import AutoModel   \n#加载模型   \nmodel $=$ AutoModel.from_pretrained(\"google-bert/bert-base-chinese\")\n\n上述代码执行的操作如下：\n",
+    "title": "# 2.1.1 AutoModel 类",
+    "parent_title": "# 2.1.1 AutoModel 类",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 1）下载模型所需资源\n\n\n更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网\n\nAutoModel 会根据提供的模型名称，从 Hugging Face Hub 上下载所需的模型资源，包括模型权重和配置文件。\n\n这些文件会自动缓存到本地，默认路径是：~/.cache/huggingface/hub/。下次加载相同模型时会直接读取缓存，不再联网下载。\n\n注意：如需使用国内镜像站，需配置如下环境变量\n\n```txt\nHF ENDPOINT=https://hf-mirror.com \n```\n",
+    "title": "# 1）下载模型所需资源",
+    "parent_title": "# 1）下载模型所需资源",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 2）根据配置文件创建模型\n\n\n配置文件（config.json）定义了模型的结构信息，Transformers 会据此识别模型类型（如BERT），并自动实例化对应的模型类（如 BertModel）。这些模型类均继承自 PyTorch 的nn.Module，因此构建出的对象本质上是一个标准的神经网络模型。\n\n上述代码得到的 model 类型为 BertModel。\n",
+    "title": "# 2）根据配置文件创建模型",
+    "parent_title": "# 2）根据配置文件创建模型",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 3）加载模型权重\n\n\n将下载的权重文件加载到模型实例中，至此模型准备完毕，可直接用于推理或微调。\n\n除了在线加载模型之外，from_pretrained()也支持从本地路径加载模型，要求目录中包含模型权重和配置文件，代码如下\n\nfrom transformers import AutoModel   \n#加载模型   \nmodel $=$ AutoModel.from_pretrained(\"/pretrained/bert-base-chinese\")\n",
+    "title": "# 3）加载模型权重",
+    "parent_title": "# 3）加载模型权重",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 2.1.2 AutoModelForXXX 类_1\n\nAutoModel 只加载预训练模型的主干结构，不包含任何任务相关的输出层，适用于特征提取或自定义模型结构的场景。\n\n除此之外，Transformers 还提供了用于具体任务的专用模型类：AutoModelForXXX，这些类在模型主干的基础上，自动添加了适配任务的输出层（通常称为“任务头”或 TaskHead），使模型能够直接用于分类、命名实体识别、问答等标准 NLP 任务的训练与推理，无需手动修改结构。\n\n常用的任务模型类有：\n\n\n\n- 【AutoModelForCausalLM】(对应模型类名称)：适用任务类型为自回归语言建模，简要说明为用于根据已有文本逐字生成后续文本。\n- 【AutoModelForSeq2SeqLM】(对应模型类名称)：适用任务类型为序列到序列生，简要说明为适用于机器翻译、文本摘要、对话。\n- 【未知项目】(对应模型类名称)：适用任务类型为成任务，简要说明为生成。\n- 【AutoModelForSequenceClassification】(对应模型类名称)：适用任务类型为文本分类，简要说明为例如情感分析、主题分类、多标签分类。\n- 【AutoModelForTokenClassification】(对应模型类名称)：适用任务类型为Token级别标注任务，简要说明为如命名实体识别（NER）。\n- 【AutoModelForQuestionAnswering】(对应模型类名称)：适用任务类型为抽取式问答，简要说明为用于从上下文中找出答案的起始和结束位置。\n\n\n\n上述 AutoModelForXXX 类的用法与 AutoModel 类一致，例如现在需要一个基于bert-base-chinese 的文本分类模型，便可直接通过以下代码进行加载：\n\n```txt\n加载模型  \nfrom transformers import AutoModelForSequenceClassification  \nmodel =  \nAutoModelForSequenceClassification.from_pretrained(\"google-bert/bert-base-chinese\") \n```",
+    "title": "# 2.1.2 AutoModelForXXX 类_1",
+    "parent_title": "# 2.1.2 AutoModelForXXX 类",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 2.1.2 AutoModelForXXX 类_2\n\n上述代码得到的 model 的类型为 BertForSequenceClassification。模型结构包括：\n\n BERT 编码器主干；  \n 一个线性层（任务头），用于输出每个类别的得分。\n\n此外，对于特定任务的模型，我们还可以在 from_pretrained() 中设置一些参数用于控制任务头的行为，例如：\n\n```javascript\nmodel = AutoModelForSequenceClassification.from_pretrained(\"google-bert/bert-base-chinese\", num_labels=3) \n```\n\n参数说明：\n\n\n\n- 【参数名】：说明。\n- 【num_labels】：指定分类任务的类别数，默认值为2。用于构建分类头的输出维度。",
+    "title": "# 2.1.2 AutoModelForXXX 类_2",
+    "parent_title": "# 2.1.2 AutoModelForXXX 类",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 2.2 模型输入输出详解\n\n\n在使用 Hugging Face 的 Transformers 模型时，理解其输入格式与输出结构，是正确使用模型的前提。\n\n由于通过 AutoModel 或 AutoModelForXXX 加载的模型，本质上是 PyTorch 的nn.Module 子类，其前向传播过程通过 forward() 方法实现，所以要了解某个模型支持哪些输入参数、返回哪些输出字段，最直接、最权威的方式就是查看其 forward() 方法定义。\n\n各模型 forward 方法的定义，可查看 Transformers 库的 API 文档：\n\n![暂无图片描述](http://192.168.200.145:9000/knowledge-base-v1/尚硅谷大模型技术之Hugging Face生态/62b21970987e444608874e86a370929ab38698ce026460db9f0121275a88aa4e.jpg)\n\n例如：\n\nBertModel 的 forward 方法定义可参考如下链接\n\n 官方网站：\n\nhttps://huggingface.co/docs/transformers/model_doc/bert#transformers.BertModel.forward\n\n 镜像网站：\n\nhttps://hf-mirror.com/docs/transformers/model_doc/bert#transformers.BertModel.forward\n\nBertForSequenceClassification 的 forward 方法定义可参考如下链接\n\n 官方网站：\n\nhttps://huggingface.co/docs/transformers/model_doc/bert#transformers.BertForSequenceClas sification.forward\n\n 镜像网站：\n\nhttps://hf-mirror.com/docs/transformers/model_doc/bert#transformers.BertForSequenceClass ification.forward\n",
+    "title": "# 2.2 模型输入输出详解",
+    "parent_title": "# 2.2 模型输入输出详解",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 第 3 章 Tokenizer 的加载与使用\n\n",
+    "title": "# 第 3 章 Tokenizer 的加载与使用",
+    "parent_title": "# 第 3 章 Tokenizer 的加载与使用",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 3.1 概述\n\n\n在 Hugging Face 的 Transformers 库中，每一个预训练模型都配套绑定有一个专用的Tokenizer，它负责将原始文本转换为模型可以理解的输入格式（如 input_ids、attention_mask等），是连接原始文本与模型计算之间的关键环节。\n\n更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网\n\n这些 Tokenizer 通常集成了从文本到张量的全流程处理能力，主要包括以下几个方面：\n\n 子词切分（subword tokenization）：将输入文本拆分为子词单元；  \n 编码映射：将每个子词转换为对应的整数 ID，即 input_ids；  \n 添加特殊 Token：自动插入如 [CLS]、[SEP] 等任务相关的特殊符号；  \n 截断与补齐（truncation & padding）：统一输入序列长度，构造批量输入；  \n 生成辅助输入：根据模型需求生成 attention_mask、token_type_ids 等附加字段；\n",
+    "title": "# 3.1 概述",
+    "parent_title": "# 3.1 概述",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 3.2 加载 Tokenizer\n\n\n在 Transformers 库中，AutoTokenizer 用于加载与指定模型配套的分词器。它会根据模型名称自动选择并实例化正确的分词器类型（如 BertTokenizer、GPT2Tokenizer、T5Tokenizer等）。\n\nAutoTokenizer 的用法与 AutoModel 相似，具体用法如下：\n\nfrom transformers import AutoTokenizer   \n#加载分词   \ntokenizer $\\equiv$ AutoTokenizer.from_pretrained(\"google-bert/bert-base-chinese\")\n\n上述代码执行的操作如下：\n\nAutoTokenizer 会根据提供的模型名称，从 Hugging Face Hub 上下载所需的文件资源，包括配置文件词表。这些文件会自动缓存到本地，默认路径是：~/.cache/huggingface/hub/。下次加载相同模型时会直接读取缓存，不再联网下载。\n\n注意：如需使用国内镜像站，需配置如下环境变量\n\n```txt\nHF_ENDPOINT=https://hf-mirror.com \n```\n\n之后 AutoTokenizer 便会根据配置文件和词表实例化一个 Tokenizer 对象。\n\n除了在线加载模型之外，from_pretrained()也支持从本地路径加载模型，要求目录中包含词表和配置文件，代码如下\n\nfrom transformers import AutoTokenizer   \n#加载模型   \ntokenizer $\\equiv$ AutoTokenizer.from_pretrained(\"/pretrained/bert-base-chinese\")\n",
+    "title": "# 3.2 加载 Tokenizer",
+    "parent_title": "# 3.2 加载 Tokenizer",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 3.3 使用 Tokenizer\n\n\n更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网\n",
+    "title": "# 3.3 使用 Tokenizer",
+    "parent_title": "# 3.3 使用 Tokenizer",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 3.3.1 概述\n\n\n前文提到过，Transformers 库中的 Tokenizer 包括如下功能：\n\n 子词切分  \n 编码映射   \n 添加特殊 Toke   \n 截断与补齐   \n 生成辅助输入\n\n下面逐一进行演示：\n",
+    "title": "# 3.3.1 概述",
+    "parent_title": "# 3.3.1 概述",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 3.3.2 常用 API\n\n",
+    "title": "# 3.3.2 常用 API",
+    "parent_title": "# 3.3.2 常用 API",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 1）分词（tokenize）\n\n\nfrom transformers import AutoTokenizer   \n#加载分词器和模型   \ntokenizer $\\equiv$ AutoTokenizer.from_pretrained(\"/pretrained/bert-base-chinese\")   \ntokens $\\equiv$ tokenizertokenizer(\"我爱自然语言处理\")   \nprint(tokens)\n\n输出内容如下\n\n['我', '爱', '自', '然', '语', '言', '处', '理']\n",
+    "title": "# 1）分词（tokenize）",
+    "parent_title": "# 1）分词（tokenize）",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 2）token 转 ID（convert_tokens_to_ids）\n\n\nfrom transformers import AutoTokenizer   \n#加载分词器和模型   \ntokenizer $\\equiv$ AutoTokenizer.from_pretrained(\"/pretrained/bert-base-chinese\")   \ntokens $\\equiv$ tokenizertokenizer(\"我爱自然语言处理\")   \nids $\\equiv$ tokenizer.convert_tokens_to_ids(tokens)   \nprint.ids)\n\n输出内容如下\n\n[2769, 4263, 5632, 4197, 6427, 6241, 1905, 4415]\n",
+    "title": "# 2）token 转 ID（convert_tokens_to_ids）",
+    "parent_title": "# 2）token 转 ID（convert_tokens_to_ids）",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 3）ID 转 token（convert_ids_to_tokens）\n\n\n更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网\n\nfrom transformers import AutoTokenizer   \n#加载分词器和模型   \ntokenizer $=$ Tokenizer.from_pretrained(\"/pretrained/bert-base-chinese\")   \nids $=$ [2769,4263,5632,4197,6427,6241,1905,4415]   \ntokens $=$ tokenizer.convert_ids_to_tokens.ids)   \nprint(tokens)\n\n输出内容如下\n\n['我', '爱', '自', '然', '语', '言', '处', '理']\n",
+    "title": "# 3）ID 转 token（convert_ids_to_tokens）",
+    "parent_title": "# 3）ID 转 token（convert_ids_to_tokens）",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 4）编码（encode）\n\n\n编码是将 tokenize $^ +$ convert_tokens_to_ids 合并后的结果，通常还会自动添加特殊符号（如 [CLS] 和 [SEP]），除此之外，还支持 padding、truncate 等功能。\n\nfrom transformers import AutoTokenizer   \n#加载分词器和模型   \ntokenizer $\\equiv$ AutoTokenizer.from_pretrained(\"/pretrained/bert-base-chinese\")   \nids $\\equiv$ tokenizer.encode(\"我爱自然语言处理\")   \nprint ids)\n\n输出内容如下\n\n```json\n[101, 2769, 4263, 5632, 4197, 6427, 6241, 1905, 4415, 102] \n```\n\n注：可通过 add_special_token False 参数禁止添加特殊符号\n",
+    "title": "# 4）编码（encode）",
+    "parent_title": "# 4）编码（encode）",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 5）解码（decode）\n\n\n解码会将一个 token ID 序列还原为对应的原始文本（或接近的文本）。\n\nfrom transformers import AutoTokenizer   \n#加载分词器和模型   \ntokenizer $=$ Tokenizer.from_pretrained(\"/pretrained/bert-base-chinese\")   \nids $=$ [101,2769,4263,5632,4197,6427,6241,1905,4415,102]   \nstring $=$ tokenizerdecode.ids)\n\n```lua\nprint(string) \n```\n\n输出内容如下：\n\n```json\n[CLS] 我爱自然语言处理 [SEP]\n```\n\n注：可通过 skip_special_tokens=True 参数跳过特殊符号\n",
+    "title": "# 5）解码（decode）",
+    "parent_title": "# 5）解码（decode）",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 6）tokenizer() 方法（即 __call__）_1\n\n这是最推荐的接口，用于直接构造模型所需的输入，其基本用法如下\n\nfrom transformers import AutoTokenizer   \ntokenizer $=$ AutoTokenizer.from_pretrained(\"/pretrained/bert-base-chinese\")   \ntext $=$ \"我爱自然语言处理\"   \n#编码文本为模型输入格式   \ninputs $=$ tokenizer(text)   \nprintinputs)\n\n输出内容如下：\n\n```txt\n{ 'input_ids': [101, 2769, 4263, 5632, 4197, 6427, 6241, 1905, 4415, 102], 'token_type_ids': [0, 0, 0, 0, 0, 0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1] } \n```\n\n除去 text，tokenizer 还提供了多个重要参数：\n\n```python\ninputs = tokenizer( text, padding=True, truncation=True, max_length=128, return_tensors=\"pt\") \n```\n\n各参数含义如下请参考官方文档。\n\n此外，tokenizer()方法还支持直接对多个文本组成的列表进行批量处理，非常适合用于模型训练或推理。\n\n```python\nfrom transformers import AutoTokenizer\n# 加载分词器和模型\ntokenizer = AutoTokenizer.from_pretrained(\"/pretrained/bert-base-chinese\")\ntexts = [\"我爱自然语言处理\", \"我爱人工智能\", \"我们一起学习\"] \n```\n\n更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网",
+    "title": "# 6）tokenizer() 方法（即 __call__）_1",
+    "parent_title": "# 6）tokenizer() 方法（即 __call__）",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 6）tokenizer() 方法（即 __call__）_2\n\n```python\ninputs = tokenizer( texts, padding=\"max_length\", # 自动补齐 truncation=True, # 自动截断 max_length=10, # 统一最大长度 return_tensors=\"pt\" # 返回 PyTorch 张量格式) print(input)\n```\n\n输出内容是一个包含三个字段的字典，每个字段是形状为 (batch_size, seq_len) 的张量：\n\n```txt\n{ 'input_ids': tensor([[101,2769,4263,5632,4197,6427,6241, 1905,4415,102], [101,2769,4263,782,2339,3255,5543,102, 0], [101,2769,812,671,6629,2110,739,102, 0]]) 'token_type_ids': tensor([[0,0,0,0,0,0,0,0,0,0,0], [0,0,0,0,0,0,0,0,0,0,0], [0,0,0,0,0,0,0,0,0,0,0]]), 'attention_mask': tensor([[1,1,1,1,1,1,1,1,1,1,1,1], [1,1,1,1,1,1,1,1,1,0,0], [1,1,1,1,1,1,1,1,1,0,0]]) } \n```",
+    "title": "# 6）tokenizer() 方法（即 __call__）_2",
+    "parent_title": "# 6）tokenizer() 方法（即 __call__）",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 3.4 与预训练模型配合使用\n\n\n从文本输入到模型输出的完整流程如下：\n\n```python\nfrom transformers import AutoTokenizer, AutoModel  \nimport torch \n```\n",
+    "title": "# 3.4 与预训练模型配合使用",
+    "parent_title": "# 3.4 与预训练模型配合使用",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 1. 加载模型和分词器\n\n\n```python\nmodel_name = \"bert-base-chinese\"\ntokenizer = AutoTokenizer.from_pretrained(model_name)\nmodel = AutoModel.from_pretrained(model_name) \n```\n",
+    "title": "# 1. 加载模型和分词器",
+    "parent_title": "# 1. 加载模型和分词器",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 2. 准备批量文本\n\n\n```txt\ntexts = [\"我爱自然语言处理\", \"我爱人工智能\", \"我们一起学习\"] \n```\n",
+    "title": "# 2. 准备批量文本",
+    "parent_title": "# 2. 准备批量文本",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 3. 编码文本为模型输入格式\n\n\n```python\nencoded = tokenizer(\n    texts,\n    padding=\"max_length\",\n    truncation=True,\n    max_length=10,\n    return_tensors=\"pt\") \n```\n\n更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网\n",
+    "title": "# 3. 编码文本为模型输入格式",
+    "parent_title": "# 3. 编码文本为模型输入格式",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 5. 模型推理（不计算梯度）  \n\n```python\nwith torch.no_grad(   ): outputs = model( input_ids=encoded[\"input_ids\"], attention_mask=encoded[\"attention_mask\"], token_type_ids=encoded[\"token_type_ids\"] # 6. 查看输出张量结构 print(outputs.keys(   )) print(\"last Hidden state:\", outputs.last hidden state.shape) print(\"pooler_output:\", outputs.pooler_output.shape) \n```\n\n输出内容如下：\n\n```python\nodict_keys(['last Hidden state', 'pooler_output'])  \nlast Hidden state: torch.Size([3, 10, 768])  \npooler_output: torch.Size([3, 768]) \n```\n",
+    "title": "# 5. 模型推理（不计算梯度）  ",
+    "parent_title": "# 5. 模型推理（不计算梯度）  ",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 第 4 章 Datasets 库\n\n",
+    "title": "# 第 4 章 Datasets 库",
+    "parent_title": "# 第 4 章 Datasets 库",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 4.1 概述\n\n\ndatasets 是 Hugging Face 提供的一个轻量级数据处理库，专为自然语言处理任务设计，能够高效地支持模型训练流程中的数据加载与预处理操作。\n\n它的主要特点包括：\n\n 加载方便：支持读取本地文件（如 CSV、JSON），也支持加载在线公开数据集；  \n 结构清晰：数据集的内部结构类似表格，每条样本由若干字段组成；  \n 无缝协作：与 tokenizer 等 Hugging Face 模块高度集成，可直接构造模型输入；  \n 功能丰富：支持常见的数据处理操作，如批量映射（.map()）、字段筛选、训练/验证集划分（.train_test_split()）等。\n\ndatasets 库的安装命令如下：\n\n```batch\npip install datasets \n```\n",
+    "title": "# 4.1 概述",
+    "parent_title": "# 4.1 概述",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 4.2 加载数据集\n\n\ndatasets 库提供了统一的接口 load_dataset()，既支持从本地文件加载数据，也支持从Hugging Face Hub 加载在线开源数据集。\n",
+    "title": "# 4.2 加载数据集",
+    "parent_title": "# 4.2 加载数据集",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 4.2.1 加载本地数据\n\n\n更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网\n\nload_dataset()支持多种本地文件格式，如 CSV、JSON、Parquet，并允许一次加载一个或多个文件。其基本语法如下：\n\n```python\nfrom datasets import load_dataset dataset = load_dataset.format, data_files=路径或字典) \n```\n\n参数说明如下：\n\n\n\n- 【format】(对应参数)：类型为str，说明为文件格式，常用的包括\"csv\"、\"json\"、\"parquet\"等。\n- 【data_files】(对应参数)：类型为str或dict，说明为文件路径。可传入字符串（加载单个文件）或字典（加载多个文件，如训练数据/测试数据）。\n\n\n\n具体用法如下：\n",
+    "title": "# 4.2.1 加载本地数据",
+    "parent_title": "# 4.2.1 加载本地数据",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 1）加载多个文件\n\n\n```python\nfrom datasets import load_dataset  \ndataset_dict = load_dataset('csv', data_files={'train': '.data/train.csv', 'test': '.data/test.csv')} \n```\n\n此时返回的是一个包含两个 Dataset 的 DatasetDict，其中每个 Dataset 称为一个 split。\n\nfrom datasets import load_dataset   \ndataset_dict $=$ load_dataset('csv',data_files $=$ { 'train':'./data/train.csv', 'test':'./data/test.csv'   \n}   \nprint(dataset_dict)   ",
+    "title": "# 1）加载多个文件",
+    "parent_title": "# 1）加载多个文件",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# DatasetDict({   \n\n",
+    "title": "# DatasetDict({   ",
+    "parent_title": "# DatasetDict({   ",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# train: Dataset(..),   \n\n",
+    "title": "# train: Dataset(..),   ",
+    "parent_title": "# train: Dataset(..),   ",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# test: Dataset(..)   \n\n",
+    "title": "# test: Dataset(..)   ",
+    "parent_title": "# test: Dataset(..)   ",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# }）\n\n",
+    "title": "# }）",
+    "parent_title": "# }）",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 2）加载单个文件\n\n\n```python\nfrom datasets import load_dataset  \ndataset_dict = load_dataset('csv', data_files=' ./data/dataset.csv') \n```\n\n此时返回的也是一个 DatasetDict，其中只包含默认命名为 \"train\" 的一个 Dataset。\n\n```txt\nprint(dataset_dict) # DatasetDict({ # train: Dataset(...) \n```\n\n更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网\n",
+    "title": "# 2）加载单个文件",
+    "parent_title": "# 2）加载单个文件",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# # })\n\n",
+    "title": "# # })",
+    "parent_title": "# # })",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 4.2.2 查看数据集\n\n\n本节以情感分析案例中的评论数据集为例，演示如何使用 `datasets` 的常用 API 查看数据内容：\n",
+    "title": "# 4.2.2 查看数据集",
+    "parent_title": "# 4.2.2 查看数据集",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 1）获取 Dataset\n\n\nload_dataset()返回的是一个 DatasetDict 对象，可以像字典一样通过键名（如 \"train\"）访问 split。\n\n```python\nfrom datasets import load_dataset  \ndataset_dict = load_dataset('csv', data_files='data/raw/online_shopping_10 Cats.csv')  \ndataset = dataset_dict[\"train\"] \n```\n\n此时 dataset 是一个 `Dataset` 对象，表示训练集。\n",
+    "title": "# 1）获取 Dataset",
+    "parent_title": "# 1）获取 Dataset",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 2）访问样本\n\n\nDataset 支持索引和切片操作来访问样本：\n\n```txt\nprint(dataset[0]) #单条样本 print(dataset[:3]) #多条样本（注意返回结构）\n```\n\n返回结构说明：\n\n\n\n- 【访问方式】：返回示例。\n- 【dataset[0]】：{'review': '很喜欢的一本书', 'label': 1, 'cat': '书籍'}。\n- 【dataset[:3]】：{'review': ['很喜欢的一本书', '内容丰富', '讲解清晰'], 'label': [1, 1, 1], 'cat': ['书籍', '书籍', '书籍']}。\n\n\n",
+    "title": "# 2）访问样本",
+    "parent_title": "# 2）访问样本",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 3）访问某个字段值\n\n\n可以进一步通过字段名访问某个字段的值：\n\n```txt\nprint(dataset[0]['review']) #第一条样本的 review 字段  \nprint(dataset[:3]['review']) #前三条样本的 review 字段列表\n```\n",
+    "title": "# 3）访问某个字段值",
+    "parent_title": "# 3）访问某个字段值",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 4.2.3 加载在线数据\n\n\nHugging Face Hub 提供了大量开源数据集，涵盖文本分类、问答、翻译、摘要等任务，可以在官网浏览与搜索：\n\n![暂无图片描述](http://192.168.200.145:9000/knowledge-base-v1/尚硅谷大模型技术之Hugging Face生态/d4f982411c94766f06f9133f2c241acb80173ca126db5d105ffedef411dbe372.jpg)\n\n每个数据集页面都会提供示例代码，方便直接复制使用。\n\n![暂无图片描述](http://192.168.200.145:9000/knowledge-base-v1/尚硅谷大模型技术之Hugging Face生态/3859079d2f69f3ddb0195cbd70e68c382498d79bb20664e6731e11162dfde8a7.jpg)\n\n具体代码如下图所示：\n\n![暂无图片描述](http://192.168.200.145:9000/knowledge-base-v1/尚硅谷大模型技术之Hugging Face生态/acbb1e6a0bd2f041053895011eda6a52f3332879d052edc58a6131f8ae125223.jpg)\n\n执行上述代码时，数据集会自动从 Hugging Face Hub 下载，并缓存至本地用户目录，默认路径为：~/.cache/huggingface/datasets/\n\n后续再次使用时将自动从本地加载，无需联网或重复下载。\n\n加载完成后，返回一个 DatasetDict 对象，结构和使用方式与本地数据完全一致。\n",
+    "title": "# 4.2.3 加载在线数据",
+    "parent_title": "# 4.2.3 加载在线数据",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 4.3 预处理数据集\n\n\n除了加载数据， datasets 库还支持常见的数据预处理操作，如编码文本、删除列、过滤样本、划分子集和设置张量格式。本节将逐步介绍这些功能。\n",
+    "title": "# 4.3 预处理数据集",
+    "parent_title": "# 4.3 预处理数据集",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 4.3.1 删除列\n\n\n可通过 .remove_columns() 删除不再需要的字段\n\n```javascript\ndataset = dataset.remove-columns(['cat']) \n```\n",
+    "title": "# 4.3.1 删除列",
+    "parent_title": "# 4.3.1 删除列",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 4.3.2 过滤行\n\n\n可使用 .filter() 筛选符合条件的样本\n\n```python\ndataset = dataset.filter(lambda x: x[\"review\"] is not None and x[\"review\"].strip() != \"\" and x[\"label\"] in [0, 1]) \n```\n",
+    "title": "# 4.3.2 过滤行",
+    "parent_title": "# 4.3.2 过滤行",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 4.3.3 划分数据集\n\n\n可使用 .train_test_split() 将单一数据集划分为训练集和验证集：\n\n```txt\ndataset_dict = dataset.train_test_split(test_size=0.2)  \ntrain_dataset = dataset_dict[\"train\"]  \ntest_dataset = dataset_dict[\"test\"] \n```\n",
+    "title": "# 4.3.3 划分数据集",
+    "parent_title": "# 4.3.3 划分数据集",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 4.3.4 编码数据_1\n\n可使用.map()方法与 tokenizer 配合，将原始文本批量编码为模型可用的输入格式（如input_ids、attention_mask、token_type_ids 等）。\n\n更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网\n\n.map()是 datasets 中的核心方法之一，支持对整个数据集中的每一条样本或每一批样本进行统一处理，常用于文本编码（tokenizer）和数据字段换。.map() 方法基本语法如下：dataset $=$ dataset.map(function, batched=False, remove_columns=None)\n\n参数说明如下：\n\n\n\n- 【参数】：说明。\n- 【function】：要应用到每条样本上的函数（或每批样本上的函数）。\n- 【batched】：是否以“批”为单位处理样本；若为 True，则每次接收一个样本列表。\n- 【remove-columns】：是否删除原始列，常用于清理不再需要的字段。\n\n\n\n以中文 BERT 模型为例，编码流程如下：\n\n```python\ntokenizer = AutoTokenizer.from_pretrained(\"bert-base-chinese\")  \ndef tokenizer.example):  \n    encoded = tokenizer(  \n        example[\"review\"],  \n        padding=\"max_length\",  \n        truncation=True,  \n        max_length=128  \n    )  \n    example['input_ids'] = encoded['input_ids']  \n    example['attention_mask'] = encoded['attention_mask']  \n    return example  \ntrain_dataset = train_dataset.map(tokenize, batched=True)  \ntest_dataset = test_dataset.map(tokenize, batched=True) \n```",
+    "title": "# 4.3.4 编码数据_1",
+    "parent_title": "# 4.3.4 编码数据",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 4.3.4 编码数据_2\n\n编码后，数据集中将新增字段如 input_ids 和 attention_mask，可直接用于模型训练。",
+    "title": "# 4.3.4 编码数据_2",
+    "parent_title": "# 4.3.4 编码数据",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 4.4 保存数据集\n\n\n处理后的数据可保存到本地，供后续训练或复用，避免重复预处理。 Datasets 提供了多种保存方式，适用于不同场景：\n\n\n\n- 【Arrow】(对应数据格式)：保存方法为save_to_disk()，适用对象为Dataset 或 DatasetDict。\n- 【CSV】(对应数据格式)：保存方法为to_csv()，适用对象为仅限 Dataset。\n- 【JSON】(对应数据格式)：保存方法为to_json()，适用对象为仅限 Dataset。\n\n\n",
+    "title": "# 4.4 保存数据集",
+    "parent_title": "# 4.4 保存数据集",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 4.4.1 Arrow 格式\n\n\nArrow 格式是 Hugging Face 官方推荐的数据持久化方式，既支持单个 Dataset 也支持多个子集的 DatasetDict。\n",
+    "title": "# 4.4.1 Arrow 格式",
+    "parent_title": "# 4.4.1 Arrow 格式",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "#  保存\n\n\n更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网\n\n```txt\ndataset_dict.save_to_disk(\"/data/processed\") \n```\n\n保存后的目录结构示例：\n\nprocessed/ $\\vdash$ dataset_dict.json $\\vdash$ test/ $\\vdash$ data-00000-of-00001 arrow $\\vdash$ dataset_info.json $\\vdash$ state.json $\\vdash$ train/ $\\vdash$ data-00000-of-00001 arrow $\\vdash$ dataset_info.json $\\vdash$ state.json\n\n每个 split（如 train、test）都会单独保存一个 Arrow 文件和相应的元数据。\n",
+    "title": "#  保存",
+    "parent_title": "#  保存",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "#  加载\n\n\nfrom datasets import load_from_disk dataset_dict $=$ load_from_disk(\"/data/processed\")\n",
+    "title": "#  加载",
+    "parent_title": "#  加载",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 4.4.2 CSV 和 JSON 格式\n\n\n如果希望将数据导出为通用格式（如用于可视化或非 Hugging Face 工具使用），可以使用 .to_csv() 或 .to_json()方法。但需注意，这些方法仅适用于单个 Dataset，不支持DatasetDict。\n",
+    "title": "# 4.4.2 CSV 和 JSON 格式",
+    "parent_title": "# 4.4.2 CSV 和 JSON 格式",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "#  保存\n\n\n```txt\n# csv\ntrain_dataset.to_csv(\"/data/processed/train.csv\")\n# json\ntrain_dataset.to_json(\"/data/processed/train.json\") \n```\n",
+    "title": "#  保存",
+    "parent_title": "#  保存",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "#  加载\n\n\n使用 load_dataset()，指定格式和路径即可重新加载：\n\n```python\nfrom datasets import load_dataset\n# 加载 CSV 文件\ndataset_dict = load_dataset(\"csv\",\ndata_files=\"/data/processed/train.csv\")\n# 加载 JSON 文件\ndataset_dict = load_dataset(\"json\",\ndata_files=\"/data/processed/train.json\") \n```\n\n加载后返回一个结构完整的 DatasetDict，可直接用于训练、评估等任务。\n\n更多 Java –大数据 –前端 –python 人工智能资料下载，可百度访问：尚硅谷官网\n",
+    "title": "#  加载",
+    "parent_title": "#  加载",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  },
+  {
+    "content": "# 4.5 集成 Dataloader\n\n\n经过预处理的 datasets.Dataset 对象可以直接与 PyTorch 的 DataLoader 集成使用。虽然它并非继承自 torch.utils.data.Dataset 类，但由于实现了__len__()和__getitem__()这两个核心接口，因此能够被 DataLoader 正确识别并进行批量迭代。\n\n在使用前，需要通过.set_format()方法将指定字段转换为张量格式以适配模型输入。典型配置如下：\n\ntrain_dataset.set_format( type $=$ \"torch\", #指定输出为PyTorch张量 columns $=$ [\"input_ids\", \"attention_mask\", \"label\"] #需要转换的字段\n\n需要注意的是：\n\n 该方法仅改变通过__getitem__()（即 dataset[i]）访问样本时的返回格式，不会修改底层数据存储\n\n 通过 columns 指定的字段会在访问时自动转换为 torch.Tensor 类型  \n 未通过 columns 指定的字段在访问时将被自动过滤\n\n完成格式设置后，即可创建标准的 DataLoader 实例：\n\n```python\nfrom torch.utils.data import DataLoader   \n# 训练集 DataLoader   \ntrain_dataloger = DataLoader(train_dataset, batch_size=32, shuffle=True) \n```",
+    "title": "# 4.5 集成 Dataloader",
+    "parent_title": "# 4.5 集成 Dataloader",
+    "file_title": "尚硅谷大模型技术之Hugging Face生态"
+  }
+]

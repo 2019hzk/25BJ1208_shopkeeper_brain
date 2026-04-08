@@ -1,0 +1,1242 @@
+[
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.749,
+                0.122,
+                0.9,
+                0.154
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                1238,
+                285,
+                1488,
+                285,
+                1488,
+                360,
+                1238,
+                360
+            ]
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.491,
+                0.345,
+                0.898,
+                0.372
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                812,
+                806,
+                1485,
+                806,
+                1485,
+                870,
+                812,
+                870
+            ]
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.759,
+                0.396,
+                0.897,
+                0.421
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                1255,
+                926,
+                1483,
+                926,
+                1483,
+                984,
+                1255,
+                984
+            ]
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.09,
+                0.828,
+                0.297,
+                0.844
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                148,
+                1936,
+                491,
+                1936,
+                491,
+                1974,
+                148,
+                1974
+            ]
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.093,
+                0.847,
+                0.267,
+                0.862
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                153,
+                1981,
+                441,
+                1981,
+                441,
+                2016,
+                153,
+                2016
+            ]
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.092,
+                0.884,
+                0.292,
+                0.898
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                152,
+                2067,
+                482,
+                2067,
+                482,
+                2100,
+                152,
+                2100
+            ]
+        }
+    ],
+    [
+        {
+            "type": "text",
+            "bbox": [
+                0.142,
+                0.078,
+                0.798,
+                0.094
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                234,
+                182,
+                1319,
+                182,
+                1319,
+                219,
+                234,
+                219
+            ]
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.142,
+                0.101,
+                0.905,
+                0.135
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                234,
+                236,
+                1496,
+                236,
+                1496,
+                315,
+                234,
+                315
+            ]
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.142,
+                0.142,
+                0.907,
+                0.252
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                234,
+                332,
+                1500,
+                332,
+                1500,
+                589,
+                234,
+                589
+            ]
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.142,
+                0.258,
+                0.907,
+                0.331
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                234,
+                603,
+                1500,
+                603,
+                1500,
+                774,
+                234,
+                774
+            ]
+        }
+    ],
+    [
+        {
+            "type": "title",
+            "bbox": [
+                0.461,
+                0.08,
+                0.54,
+                0.104
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                762,
+                187,
+                893,
+                187,
+                893,
+                243,
+                762,
+                243
+            ]
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.093,
+                0.129,
+                0.903,
+                0.145
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                153,
+                301,
+                1493,
+                301,
+                1493,
+                339,
+                153,
+                339
+            ]
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.128,
+                0.151,
+                0.903,
+                0.168
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                211,
+                353,
+                1493,
+                353,
+                1493,
+                392,
+                211,
+                392
+            ]
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.129,
+                0.174,
+                0.903,
+                0.19
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                213,
+                406,
+                1493,
+                406,
+                1493,
+                444,
+                213,
+                444
+            ]
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.128,
+                0.151,
+                0.903,
+                0.19
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.164,
+                0.196,
+                0.903,
+                0.212
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                271,
+                458,
+                1493,
+                458,
+                1493,
+                495,
+                271,
+                495
+            ]
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.164,
+                0.218,
+                0.903,
+                0.234
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                271,
+                509,
+                1493,
+                509,
+                1493,
+                547,
+                271,
+                547
+            ]
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.165,
+                0.24,
+                0.903,
+                0.256
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                272,
+                561,
+                1493,
+                561,
+                1493,
+                598,
+                272,
+                598
+            ]
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.164,
+                0.196,
+                0.903,
+                0.256
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.495,
+                0.949,
+                0.504,
+                0.959
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                818,
+                2219,
+                833,
+                2219,
+                833,
+                2243,
+                818,
+                2243
+            ]
+        }
+    ],
+    [
+        {
+            "type": "title",
+            "bbox": [
+                0.092,
+                0.062,
+                0.613,
+                0.085
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                152,
+                145,
+                1013,
+                145,
+                1013,
+                198,
+                152,
+                198
+            ]
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.092,
+                0.103,
+                0.197,
+                0.123
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                152,
+                240,
+                325,
+                240,
+                325,
+                287,
+                152,
+                287
+            ]
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.142,
+                0.14,
+                0.908,
+                0.175
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                234,
+                327,
+                1501,
+                327,
+                1501,
+                409,
+                234,
+                409
+            ]
+        },
+        {
+            "type": "image",
+            "bbox": [
+                0.147,
+                0.19,
+                0.186,
+                0.213
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.189,
+                0.199,
+                0.225,
+                0.213
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                312,
+                465,
+                372,
+                465,
+                372,
+                498,
+                312,
+                498
+            ]
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.144,
+                0.225,
+                0.562,
+                0.24
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                238,
+                526,
+                929,
+                526,
+                929,
+                561,
+                238,
+                561
+            ]
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.092,
+                0.283,
+                0.485,
+                0.303
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                152,
+                661,
+                802,
+                661,
+                802,
+                708,
+                152,
+                708
+            ]
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.142,
+                0.321,
+                0.908,
+                0.356
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                234,
+                750,
+                1501,
+                750,
+                1501,
+                832,
+                234,
+                832
+            ]
+        },
+        {
+            "type": "image_caption",
+            "bbox": [
+                0.143,
+                0.363,
+                0.431,
+                0.379
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                236,
+                849,
+                712,
+                849,
+                712,
+                886,
+                236,
+                886
+            ]
+        },
+        {
+            "type": "image",
+            "bbox": [
+                0.149,
+                0.391,
+                0.812,
+                0.585
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.092,
+                0.627,
+                0.262,
+                0.643
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                152,
+                1466,
+                433,
+                1466,
+                433,
+                1503,
+                152,
+                1503
+            ]
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.143,
+                0.66,
+                0.439,
+                0.676
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                236,
+                1543,
+                726,
+                1543,
+                726,
+                1581,
+                236,
+                1581
+            ]
+        },
+        {
+            "type": "code",
+            "bbox": [
+                0.144,
+                0.684,
+                0.312,
+                0.696
+            ],
+            "angle": 0,
+            "content": "<LA2608>system-view"
+        },
+        {
+            "type": "code",
+            "bbox": [
+                0.147,
+                0.7,
+                0.414,
+                0.714
+            ],
+            "angle": 0,
+            "content": "[LA2608]dialer-rule 1 ip permit"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.144,
+                0.717,
+                0.307,
+                0.733
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                238,
+                1677,
+                507,
+                1677,
+                507,
+                1714,
+                238,
+                1714
+            ]
+        },
+        {
+            "type": "image",
+            "bbox": [
+                0.147,
+                0.749,
+                0.186,
+                0.771
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.189,
+                0.757,
+                0.226,
+                0.772
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                312,
+                1770,
+                373,
+                1770,
+                373,
+                1805,
+                312,
+                1805
+            ]
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.142,
+                0.782,
+                0.908,
+                0.817
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                234,
+                1829,
+                1501,
+                1829,
+                1501,
+                1910,
+                234,
+                1910
+            ]
+        },
+        {
+            "type": "code",
+            "bbox": [
+                0.146,
+                0.851,
+                0.647,
+                0.93
+            ],
+            "angle": 0,
+            "content": "[LA2608]interface Cellular-Ethernet2/0  \n[LA2608-Cellular-Ethernet2/0]ip address cellular-allocated  \n[LA2608-Cellular-Ethernet2/0]dialer enable-circular  \n[LA2608-Cellular-Ethernet2/0]dialer-group 1  \n[LA2608-Cellular-Ethernet2/0]dialer timer idle 0"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.506,
+                0.949,
+                0.516,
+                0.959
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                836,
+                2219,
+                853,
+                2219,
+                853,
+                2243,
+                836,
+                2243
+            ]
+        }
+    ],
+    [
+        {
+            "type": "code",
+            "bbox": [
+                0.145,
+                0.052,
+                0.628,
+                0.116
+            ],
+            "angle": 0,
+            "content": "[LA2608-Cellular-Ethernet2/0]dialer timer autodial 5  \n[LA2608-Cellular-Ethernet2/0]dialer number *99# autodial  \n[LA2608-Cellular-Ethernet2/0]nat outbound  \n[LA2608-Cellular-Ethernet2/0]quit"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.144,
+                0.119,
+                0.343,
+                0.134
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                238,
+                278,
+                567,
+                278,
+                567,
+                313,
+                238,
+                313
+            ]
+        },
+        {
+            "type": "code",
+            "bbox": [
+                0.146,
+                0.142,
+                0.312,
+                0.154
+            ],
+            "angle": 0,
+            "content": "[LA2608]dns resolve"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.144,
+                0.159,
+                0.297,
+                0.174
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                238,
+                371,
+                491,
+                371,
+                491,
+                406,
+                238,
+                406
+            ]
+        },
+        {
+            "type": "code",
+            "bbox": [
+                0.145,
+                0.182,
+                0.661,
+                0.195
+            ],
+            "angle": 0,
+            "content": "[LA2608]ip route-static 0.0.0.0 0.0.0.0 Cellular-Ethernet2/0"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.144,
+                0.199,
+                0.445,
+                0.214
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                238,
+                465,
+                736,
+                465,
+                736,
+                500,
+                238,
+                500
+            ]
+        },
+        {
+            "type": "code",
+            "bbox": [
+                0.146,
+                0.222,
+                0.43,
+                0.235
+            ],
+            "angle": 0,
+            "content": "[LA2608] wlan ac ip 60.191.99.143"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.092,
+                0.249,
+                0.353,
+                0.266
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                152,
+                582,
+                583,
+                582,
+                583,
+                622,
+                152,
+                622
+            ]
+        },
+        {
+            "type": "image",
+            "bbox": [
+                0.146,
+                0.291,
+                0.186,
+                0.314
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.189,
+                0.299,
+                0.227,
+                0.314
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                312,
+                699,
+                375,
+                699,
+                375,
+                734,
+                312,
+                734
+            ]
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.143,
+                0.325,
+                0.56,
+                0.34
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                236,
+                760,
+                926,
+                760,
+                926,
+                795,
+                236,
+                795
+            ]
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.143,
+                0.375,
+                0.313,
+                0.39
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                236,
+                877,
+                517,
+                877,
+                517,
+                912,
+                236,
+                912
+            ]
+        },
+        {
+            "type": "code",
+            "bbox": [
+                0.144,
+                0.399,
+                0.277,
+                0.444
+            ],
+            "angle": 0,
+            "content": "<AC>system-view  \n[AC]vlan 2  \n[AC-vlan2] quit"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.143,
+                0.448,
+                0.501,
+                0.463
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                236,
+                1047,
+                828,
+                1047,
+                828,
+                1082,
+                236,
+                1082
+            ]
+        },
+        {
+            "type": "code",
+            "bbox": [
+                0.145,
+                0.472,
+                0.422,
+                0.517
+            ],
+            "angle": 0,
+            "content": "[AC]interfaceWLAN-ESS1   \n[AC-WLAN-ESS1]portaccessvlan2   \n[AC-WLAN-ESS1]quit"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.144,
+                0.522,
+                0.384,
+                0.537
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                238,
+                1220,
+                635,
+                1220,
+                635,
+                1256,
+                238,
+                1256
+            ]
+        },
+        {
+            "type": "code",
+            "bbox": [
+                0.145,
+                0.545,
+                0.465,
+                0.64
+            ],
+            "angle": 0,
+            "content": "[AC]wlan service-template 1 clear  \n[AC-wlan-st-1]ssid ssidh3c  \n[AC-wlan-st-1]bind WLAN-ESS 1  \n[AC-wlan-st-1]service-template enable  \nPlease wait... Done.  \n[AC-wlan-st-1]quit"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.144,
+                0.645,
+                0.329,
+                0.66
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                238,
+                1508,
+                544,
+                1508,
+                544,
+                1543,
+                238,
+                1543
+            ]
+        },
+        {
+            "type": "code",
+            "bbox": [
+                0.146,
+                0.668,
+                0.516,
+                0.797
+            ],
+            "angle": 0,
+            "content": "[AC]wlan auto-ap enable  \n[AC]wlan ap 2608 model LA2608 id 1  \n[AC-wlan-ap-2608]serial-id auto  \n[AC-wlan-ap-2608]radio 1  \n[AC-wlan-ap-2608-radio-1]service-template 1  \n[AC-wlan-ap-2608-radio-1]radio enable  \n[AC-wlan-ap-2608-radio-1]quit  \n[AC-wlan-ap-2608]quit"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.144,
+                0.801,
+                0.376,
+                0.817
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                238,
+                1873,
+                621,
+                1873,
+                621,
+                1910,
+                238,
+                1910
+            ]
+        },
+        {
+            "type": "code",
+            "bbox": [
+                0.145,
+                0.825,
+                0.636,
+                0.921
+            ],
+            "angle": 0,
+            "content": "[AC]interface Vlan-interface 1   \n[AC-Vlan-interface1]ip address 60.191.99.143 255.255.0.0   \n[AC-Vlan-interface1]quit   \n[AC]interface Vlan-interface 2   \n[AC-Vlan-interface2]ip address 10.249.136.1 255.255.252.0   \n[AC-Vlan-interface2]quit"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.143,
+                0.924,
+                0.484,
+                0.94
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                236,
+                2161,
+                800,
+                2161,
+                800,
+                2198,
+                236,
+                2198
+            ]
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.506,
+                0.949,
+                0.516,
+                0.959
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                836,
+                2219,
+                853,
+                2219,
+                853,
+                2243,
+                836,
+                2243
+            ]
+        }
+    ],
+    [
+        {
+            "type": "code",
+            "bbox": [
+                0.146,
+                0.052,
+                0.534,
+                0.15
+            ],
+            "angle": 0,
+            "content": "[AC]dhcp enable  \n[AC]dhcp server ip-pool vlan2  \n[AC-dhcp-pool-vlan1]network 10.249.136.0 22  \n[AC-dhcp-pool-vlan1]gateway-list 10.249.136.1  \n[AC-dhcp-pool-vlan1]dns-list 218.201.96.130  \n[AC-dhcp-pool-vlan1]quit"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.092,
+                0.163,
+                0.47,
+                0.181
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                152,
+                381,
+                777,
+                381,
+                777,
+                423,
+                152,
+                423
+            ]
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.142,
+                0.196,
+                0.909,
+                0.23
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                234,
+                458,
+                1503,
+                458,
+                1503,
+                537,
+                234,
+                537
+            ]
+        },
+        {
+            "type": "code",
+            "bbox": [
+                0.143,
+                0.238,
+                0.836,
+                0.449
+            ],
+            "angle": 0,
+            "content": "< Sysname> display wlan ap all  \nTotal Number of APs configured : 1  \nTotal Number of configured APs connected : 1  \nTotal Number of auto APs connected : 0  \nAP Profiles  \nState : I = Idle, J = Join, JA = JoinAck, IL = ImageLoad  \nC = Config, R = Run, KU = KeyUpdate, KC = KeyCfm  \nM = Master, B = Backup  \nAP Name State Model Serial-ID  \nap1 R/M LA2608 036286A054000033"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.506,
+                0.949,
+                0.517,
+                0.96
+            ],
+            "angle": 0,
+            "content": null,
+            "poly": [
+                836,
+                2219,
+                855,
+                2219,
+                855,
+                2245,
+                836,
+                2245
+            ]
+        }
+    ]
+]
