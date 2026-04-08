@@ -51,7 +51,7 @@ def create_hybrid_search_requests(dense_vector,
             data=[dense_vector],
             anns_field="dense_vector",
             param=dense_params,
-            expr=expr,
+            expr=expr,  # 过滤的条件(表达式写法)
             limit=limit
         )
 
