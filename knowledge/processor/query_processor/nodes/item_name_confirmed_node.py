@@ -299,7 +299,7 @@ class _ItemNameAligner:
 
         return confirmed, options[:self._config.item_name_max_options]  # 最终只留三个可选的商品名给前端
 
-    def _item_name_score_filter(self, confirmed:List[str], search_result:List[Dict[str,Any]]):
+    def _item_name_score_filter(self, confirmed: List[str], search_result: List[Dict[str, Any]]):
 
         """
         # RS12数字万用表和RS13数字万用表
@@ -330,8 +330,8 @@ class _ItemNameAligner:
 
         # 3. 取出分数值最大的作为基准
         max_score = max(item_name_score.values())
-        return [name for name, score in item_name_score.items() if max_score - score <= self._config.item_name_score_gap]
-
+        return [name for name, score in item_name_score.items() if
+                max_score - score <= self._config.item_name_score_gap]
 
 
 class ItemNameConfirmedNode(BaseNode):
@@ -390,7 +390,7 @@ class ItemNameConfirmedNode(BaseNode):
         # 5. 决策
         self._decide(confirmed, options, state, rewritten_query, item_names)
 
-        return llm_result
+        return state
 
     def _decide(self, confirmed: List[str], options: List[str], state: QueryGraphState,
                 rewritten_query: str, item_names: List[str]):
@@ -408,7 +408,7 @@ class ItemNameConfirmedNode(BaseNode):
         """
 
         if confirmed:
-            state['item_names'] = item_names
+            state['item_names'] = confirmed  # 对齐后的商品名
             state['rewritten_query'] = rewritten_query
         elif options:
             state["answer"] = (
