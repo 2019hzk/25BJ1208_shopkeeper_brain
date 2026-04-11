@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from openai import OpenAI
 from pymilvus.model.hybrid import BGEM3EmbeddingFunction
-
+from FlagEmbedding import FlagReranker
 from knowledge.utils.client.base import BaseClientManager, logger
 
 load_dotenv()
@@ -22,6 +22,9 @@ class AIClients(BaseClientManager):
 
     _bge_m3_client: Optional[BGEM3EmbeddingFunction] = None
     _bge_m3_lock = threading.Lock()
+
+    _bge_m3_rerank_client: Optional[FlagReranker] = None
+    _bge_m3_rerank_lock = threading.Lock()
 
     # ── VLM ──
 
@@ -79,6 +82,7 @@ class AIClients(BaseClientManager):
         except Exception as e:
             raise ConnectionError(f"OpenAI 连接失败: {e}") from e
 
+    # ── BGE-M3嵌入模型客户端 ──
     @classmethod
     def get_bge_m3_client(cls):
         return cls._get_or_create("_bge_m3_client", cls._bge_m3_lock, cls._create_bge_m3_client)
@@ -110,16 +114,54 @@ class AIClients(BaseClientManager):
         except Exception as e:
             raise ConnectionError(f"BGE_M3嵌入模型客户端创建失败: {e}") from e
 
+    # ── BGE-M3重排序模型客户端 ──
+    @classmethod
+    def get_bge_m3_rerank_client(cls):
+        return cls._get_or_create("_bge_m3_rerank_client",
+                                  cls._bge_m3_rerank_lock,
+                                  cls._create_bge_m3_rerank_client)
+
+    @classmethod
+    def _create_bge_m3_rerank_client(cls):
+        """
+        创建bge_m3 重排序模型客户端
+        Returns:
+        """
+
+        try:
+            # 1. 获取环境变量
+            model_name_or_path = cls._require_env('BGE_RERANKER_LARGE')
+            device = cls._require_env('BGE_DEVICE')
+            fp16_str = cls._require_env('BGE_FP16')
+            fp16 = fp16_str.lower() in ("true", "1")
+
+            # 2. 创建
+            reranker = FlagReranker(
+                model_name_or_path=model_name_or_path,
+                device=device,
+                use_fp16=fp16
+            )
+
+            return reranker
+        except EnvironmentError as e:
+            raise
+
+        except Exception as e:
+            raise ConnectionError(f"BGE-M3重排序模型客户端创建失败: {e}") from e
+
 
 if __name__ == '__main__':
-    llm_client: ChatOpenAI = AIClients.get_llm_client()
+    # llm_client: ChatOpenAI = AIClients.get_llm_client()
+    #
+    # llm_response = llm_client.invoke("请您给我讲一个笑话，要求输出格式是一个json")
+    #
+    # llm_result = llm_response.content
+    #
+    # import json
+    #
+    # result = json.loads(llm_result)
+    #
+    # print(result)
+    #
 
-    llm_response = llm_client.invoke("请您给我讲一个笑话，要求输出格式是一个json")
-
-    llm_result = llm_response.content
-
-    import json
-
-    result = json.loads(llm_result)
-
-    print(result)
+    print(AIClients.get_bge_m3_rerank_client())
