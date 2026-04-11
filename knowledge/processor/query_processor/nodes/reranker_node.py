@@ -1,4 +1,5 @@
 from typing import Tuple, List, Dict, Any
+import math
 from FlagEmbedding import FlagReranker
 from knowledge.processor.query_processor.base import BaseNode, T
 from knowledge.processor.query_processor.state import QueryGraphState
@@ -7,6 +8,11 @@ from knowledge.utils.client.ai_clients import AIClients
 
 class RerankerNode(BaseNode):
     name = "reranker_node"
+
+    @staticmethod
+    def _sigmoid(score: float) -> float:
+        """sigmoid归一化，将 (-∞, +∞) 映射到 (0, 1)"""
+        return 1.0 / (1.0 + math.exp(-score))
 
     def process(self, state: QueryGraphState) -> QueryGraphState:
         """
@@ -128,7 +134,8 @@ class RerankerNode(BaseNode):
             Dict[str,Any]:{"score","","other":"..."}
 
         """
-
+        if not rerank_outputs:
+            return []
         # 1. 获取重排序模型
         try:
             rerank_client: FlagReranker = AIClients.get_bge_m3_rerank_client()
@@ -144,7 +151,7 @@ class RerankerNode(BaseNode):
             rerank_scores = rerank_client.compute_score(sentence_pairs=query_doc_pairs)
 
             # 4.组合最终结果
-            doc_score = [{**d, "score": float(s)} for d, s in zip(rerank_outputs, rerank_scores)]
+            doc_score = [{**d, "score": self._sigmoid(float(s))} for d, s in zip(rerank_outputs, rerank_scores)]
 
             # 5. 排序
             sorted_doc_score = sorted(doc_score, key=lambda x: x['score'], reverse=True)
@@ -158,66 +165,38 @@ class RerankerNode(BaseNode):
     def _cliff_cutoff(self, refine_docs: List[Dict[str, Any]], rerank_min_top_k: int, rerank_max_top_k: int) -> List[
         Dict[str, Any]]:
         """
-
-        结论：分数多大还是多小，并不是很重要（差值：是否出现了断崖现象）
-        归一化：
-        动态top_k机制截取文档个数，作为返回给LLM的最终检索结果
-        Args:
-            refine_docs: 精排后的文档
-            rerank_min_top_k: 最少返回的文档数
-            rerank_max_top_k: 最大返回的文档数
-
-        Returns:
-
+          动态top_k: 归一化后只需一个断崖阈值(rerank_gap_threshold)
+          从头开始寻找最大断崖点，再用 min_top_k 兜底
         """
 
-        # 1. 定义两个索引
         upper_bound = min(rerank_max_top_k, len(refine_docs))
         lower_bound = min(rerank_min_top_k, upper_bound)
         cut_off = upper_bound
         max_gap = 0
-        # 2. 遍历
-        for i in range(lower_bound - 1, upper_bound - 1):
-            # 2.1 当前文档的分数
 
-            current_doc_score = refine_docs[i].get('score')
-            # 2.2 下一个文档的分数
+        # 从第0个间隔开始遍历，找全局最大断崖
+        for i in range(0, upper_bound - 1):
+            current_score = refine_docs[i].get('score')
+            next_score = refine_docs[i + 1].get('score')
 
-            next_doc_score = refine_docs[i + 1].get('score')
-            # 2.3 判断分数是否有
-            if not current_doc_score or not next_doc_score:
+            if current_score is None or next_score is None:
                 continue
 
-            # 2.4 获取相邻文档的分数差
-            abs_gap = current_doc_score - next_doc_score
+            gap = current_score - next_score
 
-            # 2.5 判断两个文档的分数差是否超过绝对阈值
-            need_cutoff = False
-            if abs_gap >= self.config.rerank_gap_abs:
-                need_cutoff = True
-            elif abs(current_doc_score) > 1.0:
-                rel_gap = abs_gap / (abs(current_doc_score) + 1e-6)
-                if rel_gap >= self.config.rerank_gap_ratio:
-                    need_cutoff = True
-
-            # 2.6 判断是否需要截取
-            if need_cutoff and abs_gap > max_gap:
-                max_gap = abs_gap
+            if gap >= 0.15 and gap > max_gap:
+                max_gap = gap
                 cut_off = i + 1
-                self.logger.info(f"位置{i + 1}出发生了断崖")
+                self.logger.info(f"位置{i + 1}发生断崖")
+
+        # 兜底：不管断崖在哪，至少保留 lower_bound 个
+        cut_off = max(cut_off, lower_bound)
 
         cutoff_docs = refine_docs[:cut_off]
 
-        # ===== 绝对分数底线过滤(可选) =====
-        rerank_min_score = getattr(self.config, 'rerank_min_score', None)
-        if rerank_min_score is not None:
-            filtered_docs = [d for d in cutoff_docs if (d.get("score") or 0) >= rerank_min_score]
-            if len(filtered_docs) < lower_bound:
-                cutoff_docs = refine_docs[:lower_bound]
-            else:
-                cutoff_docs = filtered_docs
-
         return cutoff_docs
+
+
 
 
 if __name__ == "__main__":
