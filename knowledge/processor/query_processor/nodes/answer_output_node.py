@@ -3,12 +3,15 @@ from langchain_openai import ChatOpenAI
 from knowledge.processor.query_processor.base import BaseNode, T
 from knowledge.processor.query_processor.state import QueryGraphState
 from knowledge.utils.client.ai_clients import AIClients
+from knowledge.utils.mongo_history_util import save_chat_message
 from knowledge.utils.task_util import set_task_result
 from knowledge.utils.sse_util import push_sse_event, SSEEvent
 from knowledge.prompts.query_prompt import ANSWER_PROMPT
 
 
 class AnswerOutPutNode(BaseNode):
+
+    name = "answer_output_node"
 
     def process(self, state: QueryGraphState) -> QueryGraphState:
         """
@@ -42,9 +45,9 @@ class AnswerOutPutNode(BaseNode):
             self._generate_answer(prompt, task_id, state)
             is_streamed = is_stream
 
-        # 4. 保存历史对话（TODO）
-
-
+        # 4. 保存历史对话
+        # 4.1 只要你问了问题 有答案(LLM生成 你生成)
+        self.save_history(state)
 
         # 5. 关闭sse通道(修改事件类型为FINAL)
         if is_stream:
@@ -53,10 +56,14 @@ class AnswerOutPutNode(BaseNode):
                 push_sse_event(task_id=task_id, event=SSEEvent.FINAL, data={})
             # 5.2 没有流过(自己生成的答案)
             else:
-                push_sse_event(task_id=task_id, event=SSEEvent.FINAL, data={"answer": state.g       et('answer')})
+                push_sse_event(task_id=task_id, event=SSEEvent.FINAL, data={"answer": state.get('answer')})
+
+        # 6. 返回
+        return state
 
     def _push_exist_answer(self, task_id: str, is_stream: bool, state: QueryGraphState):
         """
+
 
         Args:
             self:
@@ -86,8 +93,8 @@ class AnswerOutPutNode(BaseNode):
         formatted_context, usage_chars = self._format_retrieval_context(retrieval_context, max_context_chars)
 
         # 4. 构建历史上下文
-        # TODO
-        formatted_history = ""
+        chat_history_context = state.get('history') or []  # 从内存中获取历史对话（获取不到）
+        formatted_history = self._format_chat_history(chat_history_context, usage_chars)
 
         # 5. 格式化提示词模版
         return ANSWER_PROMPT.format(
@@ -179,7 +186,8 @@ class AnswerOutPutNode(BaseNode):
             llm_client = AIClients.get_llm_client(response_format=False)
         except ConnectionError as e:
             self.logger.error(f"获取LLM客户端失败 原因:{str(e)}")
-            return "LLM暂无回答"
+            state['answer'] = "LLM暂无法回答"
+            return
 
         # 2. 判断流式开关
         if state.get('is_stream'):
@@ -246,3 +254,88 @@ class AnswerOutPutNode(BaseNode):
             return "LLM暂无法回答"
 
         return accelerate_delta
+
+    def save_history(self, state: QueryGraphState):
+        """
+        保存历史对话（Q--->A）
+        存储位置：mongodb对应kb001库下的chat_message表中
+        Args:
+            state:
+
+        Returns:
+
+        """
+        # 1. 获取session_id
+        session_id = state.get('session_id')
+
+        # 2. 获取用户的查询问题
+        user_query = state.get('original_query')
+
+        # 3. 获取改写后的查询问题
+        rewritten_query = state.get('rewritten_query')
+
+        # 4. 获取商品名列表
+        item_names = state.get('item_names') or []
+
+        # 5.1 保存用户角色的消息
+        try:
+            save_chat_message(
+                session_id=session_id,
+                role="user",
+                text=user_query,
+                rewritten_query=rewritten_query,
+                item_names=item_names
+            )
+
+            # 5.2 保存AI角色的消息
+            save_chat_message(session_id=session_id,
+                              role="assistant",
+                              text=state.get('answer'),
+                              rewritten_query=rewritten_query,
+                              item_names=item_names
+                              )
+        except Exception as e:
+            self.logger.error(f"保存历史对话到MongDB中失败 原因:{str(e)}")
+
+    def _format_chat_history(self, chat_history_context: List[Dict[str, Any]], usage_chars: int) -> str:
+        """
+        格式化历史上下文
+        Args:
+            chat_history_context: 历史上下文
+            usage_chars: 可用字符串长度
+
+        Returns:
+
+        """
+
+        formatted_lines = []
+        used_chars = 0
+        # 1. 遍历格式化后的文档
+        role_map = {"user": "用户", "assistant": "助手"}
+        for msg in chat_history_context:
+
+            # 1.1 获取消息角色
+            role = msg.get('role', '')
+
+            # 1.2 获取消息内容
+            text = msg.get('text', '')
+
+            # 1.3 获取格式化后的行
+            if not text or role not in role_map:
+                continue
+
+            formatted_line = f"{role_map[role]}: {text}"
+
+            # 1.4 计算分割符长度
+            seperator_usage = 1 if formatted_lines else 0
+
+            # 1.5 计算总长度
+            total_usage = seperator_usage + len(formatted_line)
+
+            if used_chars + total_usage > usage_chars:
+                break
+
+            formatted_lines.append(formatted_line)
+            used_chars += total_usage
+
+        return "\n".join(formatted_lines)

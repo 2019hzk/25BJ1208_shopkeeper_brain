@@ -88,6 +88,9 @@ def register_router(app: FastAPI):
         return TaskStatusResponse(**task_info)
 
 
+
+
+
 if __name__ == '__main__':
     # param1:fastapi实例
     # param2:启动的服务器地址

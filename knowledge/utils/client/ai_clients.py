@@ -17,8 +17,11 @@ class AIClients(BaseClientManager):
     _openai_client: Optional[OpenAI] = None
     _openai_lock = threading.Lock()
 
-    _openai_llm_client: Optional[ChatOpenAI] = None
-    _openai_llm_lock = threading.Lock()
+    _openai_llm_response_text_client: Optional[ChatOpenAI] = None
+    _openai_llm_response_text_lock = threading.Lock()
+
+    _openai_llm_response_json_client: Optional[ChatOpenAI] = None
+    _openai_llm_response_json_lock = threading.Lock()
 
     _bge_m3_client: Optional[BGEM3EmbeddingFunction] = None
     _bge_m3_lock = threading.Lock()
@@ -52,13 +55,39 @@ class AIClients(BaseClientManager):
     # ── LLM ──
     @classmethod
     def get_llm_client(cls, response_format: bool = True) -> ChatOpenAI:
-        return cls._get_or_create("_openai_llm_client", cls._openai_llm_lock,
-                                  lambda: cls._create_llm_client(response_format))
+        if response_format:
+            return cls._get_or_create("_openai_llm_json_client", cls._openai_llm_response_json_lock,
+                                      lambda: cls._create_llm_json_client(response_format))
+        else:
+            return cls._get_or_create("_openai_llm_text_client", cls._openai_llm_response_text_lock,
+                                      cls._create_llm_text_client)
 
     @classmethod
-    def _create_llm_client(cls, response_format) -> ChatOpenAI:
+    def _create_llm_text_client(cls) -> ChatOpenAI:
         try:
+            api_key = cls._require_env("OPENAI_API_KEY")
+            base_url = cls._require_env("OPENAI_API_BASE")
+            model_name = cls._require_env('LLM_DEFAULT_MODEL')
 
+            llm_client = ChatOpenAI(
+                model_name=model_name,
+                temperature=0,
+                openai_api_key=api_key,
+                openai_api_base=base_url,
+            )
+            logger.info(f"OpenAI LLM 客户端初始化成功")
+            return llm_client
+
+        except EnvironmentError:
+            raise
+        except Exception as e:
+            raise ConnectionError(f"OpenAI 连接失败: {e}") from e
+
+    # ── LLM ──
+
+    @classmethod
+    def _create_llm_json_client(cls, response_format) -> ChatOpenAI:
+        try:
             api_key = cls._require_env("OPENAI_API_KEY")
             base_url = cls._require_env("OPENAI_API_BASE")
             model_name = cls._require_env('LLM_DEFAULT_MODEL')

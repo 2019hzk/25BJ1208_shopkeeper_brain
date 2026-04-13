@@ -7,7 +7,13 @@ from langgraph.graph import StateGraph, END
 from langgraph.graph.state import CompiledStateGraph
 from dotenv import load_dotenv
 from knowledge.processor.query_processor.state import QueryGraphState
-
+from knowledge.processor.query_processor.nodes.item_name_confirmed_node import ItemNameConfirmedNode
+from knowledge.processor.query_processor.nodes.hybrid_vector_search_node import HybridVectorSearch
+from knowledge.processor.query_processor.nodes.hyde_vector_search_node import HyDeVectorSearchNode
+from knowledge.processor.query_processor.nodes.web_mcp_search_node import WebMcpSearchNode
+from knowledge.processor.query_processor.nodes.rrf_merge_node import RrfMergeNode
+from knowledge.processor.query_processor.nodes.reranker_node import RerankerNode
+from knowledge.processor.query_processor.nodes.answer_output_node import AnswerOutPutNode
 
 # 加载环境变量
 load_dotenv()
@@ -74,15 +80,15 @@ def create_query_graph() -> CompiledStateGraph:
 
     # 2. 实例化节点
     nodes = {
-        "item_name_confirm": ItemNameConfirmNode(),
-        "multi_search": lambda x: x,   # 虚拟节点
-        "search_embedding": "",
-        "search_embedding_hyde": "",
-        "web_search_mcp": "",
+        "item_name_confirmed_node": ItemNameConfirmedNode(),
+        "multi_search": lambda x: x,  # 虚拟节点
+        "hybrid_vector_search_node": HybridVectorSearch(),
+        "hyde_vector_search_node": HyDeVectorSearchNode(),
+        "web_mcp_search_node": WebMcpSearchNode(),
         "join": lambda x: {},  # 多路搜索汇合（虚节点）
-        "rrf": "",
-        "rerank": "",
-        "answer_output": "",
+        "rrf_merge_node": RrfMergeNode(),
+        "reranker_node": RerankerNode(),
+        "answer_output_node": AnswerOutPutNode(),
     }
 
     # 3. 添加节点
@@ -90,33 +96,33 @@ def create_query_graph() -> CompiledStateGraph:
         workflow.add_node(name, node)  # type:ignore
 
     # 4. 设置入口点
-    workflow.set_entry_point("item_name_confirm")
+    workflow.set_entry_point("item_name_confirmed_node")
 
     # 5. 添加条件边：商品名称确认后根据是否有答案路由
     workflow.add_conditional_edges(
-        "item_name_confirm",
+        "item_name_confirmed_node",
         route_after_item_confirm,
         {
             False: "multi_search",
-            True: "answer_output",
+            True: "answer_output_node",
         },
     )
 
     # 6. 多路搜索分发（并行执行）
-    workflow.add_edge("multi_search", "search_embedding")
-    workflow.add_edge("multi_search", "search_embedding_hyde")
-    workflow.add_edge("multi_search", "web_search_mcp")
+    workflow.add_edge("multi_search", "hybrid_vector_search_node")
+    workflow.add_edge("multi_search", "hyde_vector_search_node")
+    workflow.add_edge("multi_search", "web_mcp_search_node")
 
     # 7. 多路搜索汇合
-    workflow.add_edge("search_embedding", "join")
-    workflow.add_edge("search_embedding_hyde", "join")
-    workflow.add_edge("web_search_mcp", "join")
+    workflow.add_edge("hybrid_vector_search_node", "join")
+    workflow.add_edge("hyde_vector_search_node", "join")
+    workflow.add_edge("web_mcp_search_node", "join")
 
     # 8. 顺序边
-    workflow.add_edge("join", "rrf")
-    workflow.add_edge("rrf", "rerank")
-    workflow.add_edge("rerank", "answer_output")
-    workflow.add_edge("answer_output", END)
+    workflow.add_edge("join", "rrf_merge_node")
+    workflow.add_edge("rrf_merge_node", "reranker_node")
+    workflow.add_edge("reranker_node", "answer_output_node")
+    workflow.add_edge("answer_output_node", END)
 
     # 9. 返回可运行的状态
     return workflow.compile()
@@ -125,11 +131,7 @@ def create_query_graph() -> CompiledStateGraph:
 # 创建全局图实例
 query_app = create_query_graph()
 
-
-
 if __name__ == "__main__":
-
-
     print("=" * 60)
     print("开始测试: 查询流程主图 (main_graph)")
     print("=" * 60)
@@ -144,10 +146,6 @@ if __name__ == "__main__":
         "task_id": "test_task_001",
         "is_stream": False,
     }
-
-    print(f"  查询: {mock_state_1['original_query']}")
-    print(f"  session_id: {mock_state_1['session_id']}")
-    print(f"  is_stream: {mock_state_1['is_stream']}")
 
     result_1 = query_app.invoke(mock_state_1)
 

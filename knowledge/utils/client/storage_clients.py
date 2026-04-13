@@ -91,10 +91,15 @@ class StorageClients(BaseClientManager):
             mongo_url = cls._require_env("MONGO_URL")
             db_name = cls._require_env("MONGO_DB_NAME")
 
+            # 1. 实例化客户端
             client = MongoClient(mongo_url)
+
+            # 2. 根据客户端获取数据库对象
             db = client[db_name]
 
             logger.info(f"MongoDB 客户端初始化成功 (db={db_name})")
+
+            # 3. 返回数据库对象
             return db
         except EnvironmentError:
             raise

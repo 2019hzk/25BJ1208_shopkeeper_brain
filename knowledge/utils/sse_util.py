@@ -1,8 +1,7 @@
 import json
 import queue
-import asyncio
 from typing import Dict, Any, Optional, AsyncGenerator
-from fastapi import Request
+
 
 
 class SSEEvent:
@@ -51,5 +50,6 @@ def push_sse_event (task_id: str, event: str, data: Dict[str, Any]):
     if stream_queue:
         # 3. 将事件推送到队列
         stream_queue.put({"event": event, "data": data})
+
 
 

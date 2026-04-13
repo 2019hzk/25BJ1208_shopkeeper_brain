@@ -13,6 +13,7 @@ from knowledge.prompts.query_prompt import ITEM_NAME_USER_EXTRACT_TEMPLATE
 from knowledge.utils.embedding_util import generate_bge_m3_hybrid_vectors
 from knowledge.utils.milvus_util import create_hybrid_search_requests, execute_hybrid_search_query
 from knowledge.processor.query_processor.base import get_config
+from knowledge.utils.mongo_history_util import get_recent_messages
 
 
 class _ItemNameExtractor:
@@ -370,12 +371,20 @@ class ItemNameConfirmedNode(BaseNode):
 
         # 1. 获取用户原始问题
         original_query = state.get('original_query')
+        session_id = state.get('session_id')
 
-        # 2. 获取历史对话(mongodb)TODO
-        history_context = ""
+        # 2. 获取历史对话(mongodb)
+        history_context = get_recent_messages(session_id=session_id, limit=10)  # 条数10 轮数是5
+        formatted_history = []
+        for history in history_context:
+            role = history.get('role', '')
+            text = history.get('text', '')
+            formatted_context = f"角色:{role},内容:{text}"
+            formatted_history.append(formatted_context)
+        formatted_history_str = " ".join(formatted_history)
 
         # 3. 利用LLM进行商品名提取和查询重写
-        llm_result: Dict[str, Any] = self._extractor.extract_item_name(original_query, history_context)
+        llm_result: Dict[str, Any] = self._extractor.extract_item_name(original_query, formatted_history_str)
 
         # 3.1 获取LLM结果
         item_names = llm_result.get('item_names')
@@ -390,6 +399,8 @@ class ItemNameConfirmedNode(BaseNode):
         # 5. 决策
         self._decide(confirmed, options, state, rewritten_query, item_names)
 
+        # 6. 更新state的历史对话(从MongoDB中查询出来)
+        state['history'] = history_context
         return state
 
     def _decide(self, confirmed: List[str], options: List[str], state: QueryGraphState,

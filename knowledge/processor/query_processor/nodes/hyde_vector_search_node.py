@@ -1,4 +1,4 @@
-from typing import Tuple, List, Dict, Any, Optional
+from typing import Tuple, List, Dict, Any, Optional, Union
 
 from langchain_core.messages import SystemMessage, HumanMessage
 from knowledge.processor.query_processor.base import BaseNode, T
@@ -14,7 +14,7 @@ from knowledge.utils.milvus_util import create_hybrid_search_requests, execute_h
 class HyDeVectorSearchNode(BaseNode):
     name = "hyde_vector_search_node"
 
-    def process(self, state: QueryGraphState) -> QueryGraphState:
+    def process(self, state: QueryGraphState) -> Union[QueryGraphState, Dict[str, Any]]:
 
         # 1. 参数校验
         rewritten_query, item_names = self._validate_state(state)
@@ -64,17 +64,15 @@ class HyDeVectorSearchNode(BaseNode):
                                                             ranker_weights=(0.5, 0.5),
                                                             norm_score=True,
                                                             limit=5,
-                                                            output_fields=["chunk_id", "content", "item_name",'title']
+                                                            output_fields=["chunk_id", "content", "item_name", 'title']
                                                             )
 
             if not hybrid_search_res or not hybrid_search_res[0]:
                 return state
 
-            # 7.3 更新state
-            state['hyde_embedding_chunks'] = hybrid_search_res[0]
 
-            # 7.4 返回state
-            return state
+            # 7.3 修改自己的并且返回修改后的
+            return {"hyde_embedding_chunks":hybrid_search_res[0]}
 
         except Exception as e:
             self.logger.error(

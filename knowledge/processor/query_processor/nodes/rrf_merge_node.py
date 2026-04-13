@@ -4,6 +4,8 @@ from knowledge.processor.query_processor.state import QueryGraphState
 
 
 class RrfMergeNode(BaseNode):
+
+    name = "rrf_merge_node"
     def process(self, state: QueryGraphState) -> QueryGraphState:
         # 1. 获取本地检索的两路结果
         embedding_chunks = state.get('embedding_chunks') or []

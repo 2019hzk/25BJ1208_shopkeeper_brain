@@ -1,7 +1,7 @@
 import asyncio
 import json
 from json import JSONDecodeError
-from typing import Tuple, List, Dict, Any
+from typing import Tuple, List, Dict, Any,Union
 from agents.mcp import MCPServerStreamableHttp
 
 from knowledge.processor.query_processor.base import BaseNode, T
@@ -12,7 +12,7 @@ from knowledge.processor.query_processor.exceptions import StateFieldError
 class WebMcpSearchNode(BaseNode):
     name = "web_mcp_search_node"
 
-    def process(self, state: QueryGraphState) -> QueryGraphState:
+    def process(self, state: QueryGraphState) ->Union[QueryGraphState,Dict[str, Any]] :
 
         # 1. 参数校验
         rewritten_query, item_names = self._validate_state(state)
@@ -25,10 +25,8 @@ class WebMcpSearchNode(BaseNode):
         if not web_search_results:
             return state
 
-        # 4. 更新state
-        state['web_search_docs'] = web_search_results
-
-        return state
+        # 4. 返回
+        return {"web_search_docs": web_search_results}
 
     def _validate_state(self, state: QueryGraphState) -> Tuple[str, List[str]]:
         # 1. 用户的问题（LLM重写后的）
