@@ -12,7 +12,9 @@ _tasks_done_list: Dict[str, List[str]] = defaultdict(list)
 _tasks_duration: Dict[str, Dict[str, float]] = defaultdict(dict)
 
 # 只要访问不存在的 key，自动帮你初始化为 {} 查询时候用
-# _tasks_result: Dict[str, Dict[str, str]] = defaultdict(dict)
+# key：任务id    内部字典的key:任务对应的某一个节点（答案生成节点）--->节点对应的结果
+# {"task1":{"answer":"节点的结果"}}
+_tasks_result: Dict[str, Dict[str, str]] = defaultdict(dict)
 
 _tasks_status: Dict[str, str] = {}
 
@@ -85,20 +87,20 @@ def update_task_status(task_id: str, status_name: str) -> None:
     # 1. 更新指定任务的总体运行状态（如 processing 等）
     _tasks_status[task_id] = status_name
 
-#
-# def set_task_result(task_id: str, key: str, value: str) -> None:
-#     """
-#     存储任务结果字段（如 answer / error）。
-#     """
-#     _tasks_result[task_id][key] = value
+
+def set_task_result(task_id: str, key: str, value: str) -> None:
+    """
+    存储任务结果字段（如 answer / error）。
+    """
+    _tasks_result[task_id][key] = value
 
 
-# def get_task_result(task_id: str, key: str, default: str = "") -> str:
-#     """
-#     获取任务结果字段（如 answer / error）。
-#     """
-#     return _tasks_result.get(task_id, {}).get(key, default)
-#
+def get_task_result(task_id: str, key: str, default: str = "") -> str:
+    """
+    获取任务结果字段（如 answer / error）。
+    """
+    return _tasks_result.get(task_id, {}).get(key, default)
+
 
 
 def add_node_duration(task_id: str, node_name: str, duration: float) -> None:

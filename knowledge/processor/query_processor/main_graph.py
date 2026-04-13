@@ -125,3 +125,57 @@ def create_query_graph() -> CompiledStateGraph:
 # 创建全局图实例
 query_app = create_query_graph()
 
+
+
+if __name__ == "__main__":
+
+
+    print("=" * 60)
+    print("开始测试: 查询流程主图 (main_graph)")
+    print("=" * 60)
+
+    # ---- 测试场景 1：商品名明确，走完整 pipeline ----
+    print("\n【场景 1】: 商品名明确，走完整 pipeline")
+    print("-" * 60)
+
+    mock_state_1 = {
+        "original_query": "RS-12 数字万用表如何测量直流电压？",
+        "session_id": "test_session_main_graph",
+        "task_id": "test_task_001",
+        "is_stream": False,
+    }
+
+    print(f"  查询: {mock_state_1['original_query']}")
+    print(f"  session_id: {mock_state_1['session_id']}")
+    print(f"  is_stream: {mock_state_1['is_stream']}")
+
+    result_1 = query_app.invoke(mock_state_1)
+
+    print(f"\n  【结果】:")
+    print(f"  商品名: {result_1.get('item_names')}")
+    print(f"  重写查询: {result_1.get('rewritten_query')}")
+    answer_1 = result_1.get("answer", "")
+    print(f"  答案: {answer_1[:200]}..." if len(answer_1) > 200 else f"  答案: {answer_1}")
+
+    # ---- 测试场景 2：商品名模糊，被拦截 ----
+    print("\n\n【场景 2】: 商品名模糊，被拦截返回选项")
+    # print("-" * 60)
+    #
+    # mock_state_2 = {
+    #     "original_query": "万用表怎么测电压？",
+    #     "session_id": "test_session_main_graph",
+    #     "task_id": "test_task_002",
+    #     "is_stream": False,
+    # }
+    #
+    # print(f"  查询: {mock_state_2['original_query']}")
+    #
+    # result_2 = query_app.invoke(mock_state_2)
+    #
+    # print(f"\n  【结果】:")
+    # print(f"  商品名: {result_2.get('item_names')}")
+    # answer_2 = result_2.get("answer", "")
+    # print(f"  答案: {answer_2}")
+    #
+    # print("\n" + "=" * 60)
+    # print("全部测试完成")
