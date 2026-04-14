@@ -130,22 +130,21 @@ class BaseNode(ABC):
         """
         push_sse_event(task_id=task_id,
                        event=SSEEvent.PROGRESS,
-                       data={"progress": {
+                       data={
                            "status": get_task_status(task_id),
                            "done_list": get_done_task_list(task_id),
                            "running_list": get_running_task_list(task_id),
                        }
-                       })
+                       )
 
+    def setup_logging(level: int = logging.INFO):
+        """配置查询流程日志。
 
-def setup_logging(level: int = logging.INFO):
-    """配置查询流程日志。
-
-    Args:
-        level: 日志级别，默认 INFO。
-    """
-    logging.basicConfig(
-        level=level,
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-        datefmt='%Y-%m-%d %H:%M:%S'
-    )
+        Args:
+            level: 日志级别，默认 INFO。
+        """
+        logging.basicConfig(
+            level=level,
+            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+            datefmt='%Y-%m-%d %H:%M:%S'
+        )

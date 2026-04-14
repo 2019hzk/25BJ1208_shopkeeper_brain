@@ -2,7 +2,7 @@ import asyncio
 
 import uvicorn, os
 from typing import Union
-from fastapi import FastAPI, UploadFile, Depends, BackgroundTasks, Request
+from fastapi import FastAPI, UploadFile, Depends, BackgroundTasks, Request,HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
@@ -116,6 +116,28 @@ def register_router(app: FastAPI):
 
         """
         return StreamingResponse(content=sse_generator(task_id, request), media_type="text/event-stream")
+
+
+
+
+    @app.get("/history/{session_id}")
+    async def get_history(
+            session_id: str, limit: int = 50,
+            service: QueryService = Depends(get_query_service),
+    ):
+        try:
+            items = service.get_history(session_id, limit)
+            return {"session_id": session_id, "items": items}
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=f"history error: {e}")
+
+    @app.delete("/history/{session_id}")
+    async def clear_chat_history(
+            session_id: str,
+            service: QueryService = Depends(get_query_service),
+    ):
+        count = service.clear_history(session_id)
+        return {"message": "History cleared", "deleted_count": count}
 
 
 if __name__ == '__main__':

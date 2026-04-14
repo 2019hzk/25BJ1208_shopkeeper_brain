@@ -383,7 +383,7 @@
       const regex = /(https?:\/\/[^\s]+)/g;
       const matches = s.match(regex) || [];
       const urls = [];
-      
+
       // 去除首尾标点
       const trimTailPunct = (u) => String(u || '').replace(/[)\]}'">，。,;；\]】）＞]+$/g, '');
       const trimHeadPunct = (u) => String(u || '').replace(/^[<([{'"]+|^[＜（【\[]+/g, '');
@@ -467,14 +467,14 @@
         ? candidateImageUrls.map(normalizeUrl).filter(isImageUrl)
         : [];
       const hasBlockImages = imagesFromBlock && imagesFromBlock.length > 0;
-      
+
       // 使用宽松提取
       const looseImages = extractUrlsLoose(answerText).map(normalizeUrl).filter(isImageUrl);
-      
+
       // 只要后端给了候选图片，就展示（避免答案没写“如图”但用户仍需要看图）
       // 或者从文本里提取到了图片 URL
       const shouldShow = hasBlockImages || (candidates.length > 0) || (looseImages.length > 0);
-      
+
       // 优先级：Block 显式标记 > 后端候选 > 文本宽松提取
       // 注意：这里做个并集可能更好，防止漏掉
       const allImages = new Set([
@@ -738,7 +738,7 @@
         console.log('[perf] B submitQuery start', performance.now(), { isStream });
         const data = await submitQuery(text);
         console.log('[perf] B submitQuery end', performance.now(), data);
-        
+
         // 渲染初始状态
         renderProgress(botMsgEl, [], [], 'pending');
 
@@ -753,7 +753,7 @@
 
         // 流式：SSE
         const { task_id } = data;
-        
+
         const bubble = botMsgEl.querySelector('.bubble');
         let answerEl = bubble.querySelector('.answer');
         if(!answerEl){
@@ -793,38 +793,47 @@
           }catch(_){}
         });
 
-        es.addEventListener('final', (e) => {
+        // ★ 抽取公共方法：收到 final/final_answer 时，强制刷新进度 + 渲染答案
+        function handleFinalEvent(e) {
           const typing = botMsgEl.querySelector('.typing');
           if(typing) typing.remove();
-          // 收起进度条
-          const progress = botMsgEl.querySelector('details.progress');
-          if(progress) progress.removeAttribute('open');
-          
-          try{
-            const d = JSON.parse(e.data || '{}');
-            // 流式 delta 可能不包含“【图片】/图片列表”，最终包的 d.answer 才是完整答案；优先使用 d.answer
-            const finalText = (d && typeof d.answer === 'string' && d.answer.trim().length > 0) ? d.answer : (rawAnswerText || answerEl.textContent || '');
-            renderAnswerWithImages(answerEl, finalText, d.image_urls || []);
-          }catch(_){}
-          es.close();
-          sendBtn.disabled = false;
-        });
 
-        es.addEventListener('final_answer', (e) => {
-           // 响应用户的 final_answer 信号，确保图片渲染
-          const typing = botMsgEl.querySelector('.typing');
-          if(typing) typing.remove();
-          const progress = botMsgEl.querySelector('details.progress');
-          if(progress) progress.removeAttribute('open');
-          
+          // ★ 关键修复：强制把所有"进行中 ⏳"的节点标记为"已完成 ✅"
+          // 原因：最后一条 progress 事件可能还没到就被 final 抢先了，
+          // 导致"生成答案"等节点永远卡在 ⏳ 状态不变绿
+          const details = botMsgEl.querySelector('details.progress');
+          if(details){
+            const ul = details.querySelector('ul');
+            if(ul){
+              const lis = ul.querySelectorAll('li');
+              lis.forEach(li => {
+                if(li.textContent.includes('⏳')){
+                  li.textContent = li.textContent.replace('⏳', '✅');
+                }
+              });
+            }
+            // 更新 summary：全部完成
+            const summary = details.querySelector('summary');
+            if(summary){
+              const totalDone = details.querySelectorAll('li').length;
+              summary.textContent = `阶段进度（已完成${totalDone}，进行中0，状态：已完成）`;
+            }
+            // 收起进度条
+            details.removeAttribute('open');
+          }
+
           try{
             const d = JSON.parse(e.data || '{}');
+            // 优先使用 final 包里的完整 answer，否则回退到流式拼接的文本
             const finalText = (d && typeof d.answer === 'string' && d.answer.trim().length > 0) ? d.answer : (rawAnswerText || answerEl.textContent || '');
             renderAnswerWithImages(answerEl, finalText, d.image_urls || []);
           }catch(_){}
           es.close();
           sendBtn.disabled = false;
-        });
+        }
+
+        es.addEventListener('final', handleFinalEvent);
+        es.addEventListener('final_answer', handleFinalEvent);
 
         es.addEventListener('error', (e) => {
           const typing = botMsgEl.querySelector('.typing');

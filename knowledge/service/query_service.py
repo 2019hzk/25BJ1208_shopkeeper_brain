@@ -1,11 +1,14 @@
 import uuid, logging
-
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+from typing import List,Dict,Any
 from knowledge.processor.query_processor.main_graph import query_app
 from knowledge.utils.task_util import update_task_status, TASK_STATUS_PROCESSING, TASK_STATUS_FAILED, \
     TASK_STATUS_COMPLETED
 from knowledge.utils.task_util import get_task_result
+from knowledge.utils.mongo_history_util import get_recent_messages
+from knowledge.utils.mongo_history_util import clear_history
 
 
 class QueryService:
@@ -59,3 +62,23 @@ class QueryService:
     def get_task_result(self, task_id: str):
         answer = get_task_result(task_id=task_id, key="answer")
         return answer
+
+    def get_history(self, session_id: str, limit: int = 50) -> List[Dict[str, Any]]:
+
+        # 1. 根据session_id获取最近的指定条数的历史对话
+        records = get_recent_messages(session_id, limit=limit)
+        return [
+            {
+                "_id": str(r.get("_id", "")),
+                "session_id": r.get("session_id", ""),
+                "role": r.get("role", ""),
+                "text": r.get("text", ""),
+                "rewritten_query": r.get("rewritten_query", ""),
+                "item_names": r.get("item_names", []),
+                "ts": r.get("ts"),
+            }
+            for r in records
+        ]
+
+    def clear_history(self, session_id: str) -> int:
+        return clear_history(session_id)
