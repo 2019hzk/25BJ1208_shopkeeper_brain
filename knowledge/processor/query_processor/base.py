@@ -7,6 +7,9 @@ from typing import TypeVar, Optional
 import logging
 from knowledge.processor.query_processor.config import QueryConfig, get_config
 from knowledge.processor.query_processor.exceptions import QueryProcessError
+from knowledge.utils.task_util import add_running_task, add_done_task, get_task_status, get_running_task_list, \
+    get_done_task_list
+from knowledge.utils.sse_util import push_sse_event, SSEEvent
 
 T = TypeVar("T")  # 泛型状态类型
 
@@ -61,10 +64,25 @@ class BaseNode(ABC):
         Raises:
             QueryProcessError: 节点执行失败时抛出。
         """
+        is_stream = state.get('is_stream')
+        task_id = state.get('task_id')
+
         try:
             self.logger.info(f"--- {self.name} 开始 ---")
 
+            if task_id:
+                add_running_task(task_id, self.name)  # 当前正准备执行的节点加入
+                # 如果是流式
+                if is_stream:
+                    self._push_progress(task_id)
+
             result = self.process(state)
+            if task_id:
+                add_done_task(task_id, self.name)  # 当前正准备执行的节点加入
+                # 如果是流式
+                if is_stream:
+                    self._push_progress(task_id)
+
             self.logger.info(f"--- {self.name} 完成 ---")
             return result
         except Exception as e:
@@ -74,7 +92,6 @@ class BaseNode(ABC):
                 node_name=self.name,
                 cause=e
             )
-
 
     @abstractmethod
     def process(self, state: T) -> T:
@@ -101,6 +118,24 @@ class BaseNode(ABC):
         if message:
             log_msg += f" {message}"
         self.logger.info(log_msg)
+
+    def _push_progress(self, task_id):
+        """
+        推送节点的进度(全量推所有进度)
+        Args:
+            task_id: 任务id
+
+        Returns:
+
+        """
+        push_sse_event(task_id=task_id,
+                       event=SSEEvent.PROGRESS,
+                       data={"progress": {
+                           "status": get_task_status(task_id),
+                           "done_list": get_done_task_list(task_id),
+                           "running_list": get_running_task_list(task_id),
+                       }
+                       })
 
 
 def setup_logging(level: int = logging.INFO):

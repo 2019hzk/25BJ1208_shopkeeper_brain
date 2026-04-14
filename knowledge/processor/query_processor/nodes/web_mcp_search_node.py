@@ -55,6 +55,7 @@ class WebMcpSearchNode(BaseNode):
 
         """
 
+
         # 1. 定义MCP客户端(StreamableHttp方式)
         async with MCPServerStreamableHttp(
                 name="联网搜索",  # MCP客户端名字

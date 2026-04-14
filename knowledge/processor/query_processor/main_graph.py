@@ -149,6 +149,7 @@ if __name__ == "__main__":
 
     result_1 = query_app.invoke(mock_state_1)
 
+
     print(f"\n  【结果】:")
     print(f"  商品名: {result_1.get('item_names')}")
     print(f"  重写查询: {result_1.get('rewritten_query')}")
