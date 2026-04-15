@@ -52,13 +52,13 @@ class QueryConfig:
 
     # ==================== 商品确认节点配置 ====================
     item_name_high_confidence: float = field(
-        default_factory=lambda: float(os.getenv("ITEM_NAME_HIGH_CONFIDENCE", "0.7"))
+        default_factory=lambda: float(os.getenv("ITEM_NAME_HIGH_CONFIDENCE", "0.75"))
     )
     item_name_mid_confidence: float = field(
         default_factory=lambda: float(os.getenv("ITEM_NAME_MID_CONFIDENCE", "0.45"))
     )
     item_name_score_gap: float = field(
-        default_factory=lambda: float(os.getenv("ITEM_NAME_SCORE_GAP", "0.15"))
+        default_factory=lambda: float(os.getenv("ITEM_NAME_SCORE_GAP", "0.08"))
     )
     item_name_max_options: int = field(
         default_factory=lambda: int(os.getenv("ITEM_NAME_MAX_OPTIONS", "3"))

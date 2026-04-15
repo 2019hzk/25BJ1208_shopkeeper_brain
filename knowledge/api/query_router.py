@@ -44,8 +44,6 @@ def create_app():
 
     # 5. 返回fastapi实例
     return app
-
-
 def register_router(app: FastAPI):
     @app.get("/")
     def hello_world():
