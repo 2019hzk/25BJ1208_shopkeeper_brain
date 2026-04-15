@@ -1,0 +1,70 @@
+{
+  "best_params": {
+    "confirm": 0.75,
+    "options": 0.45,
+    "gap": 0.08
+  },
+  "best_accuracy": 93.75,
+  "top_results": [
+    {
+      "confirm": 0.75,
+      "options": 0.45,
+      "gap": 0.08,
+      "accuracy": 93.75
+    },
+    {
+      "confirm": 0.75,
+      "options": 0.45,
+      "gap": 0.1,
+      "accuracy": 93.75
+    },
+    {
+      "confirm": 0.75,
+      "options": 0.45,
+      "gap": 0.12,
+      "accuracy": 93.75
+    },
+    {
+      "confirm": 0.75,
+      "options": 0.45,
+      "gap": 0.15,
+      "accuracy": 93.75
+    },
+    {
+      "confirm": 0.75,
+      "options": 0.45,
+      "gap": 0.18,
+      "accuracy": 93.75
+    },
+    {
+      "confirm": 0.75,
+      "options": 0.45,
+      "gap": 0.2,
+      "accuracy": 93.75
+    },
+    {
+      "confirm": 0.75,
+      "options": 0.45,
+      "gap": 0.25,
+      "accuracy": 93.75
+    },
+    {
+      "confirm": 0.75,
+      "options": 0.5,
+      "gap": 0.08,
+      "accuracy": 93.75
+    },
+    {
+      "confirm": 0.75,
+      "options": 0.5,
+      "gap": 0.1,
+      "accuracy": 93.75
+    },
+    {
+      "confirm": 0.75,
+      "options": 0.5,
+      "gap": 0.12,
+      "accuracy": 93.75
+    }
+  ]
+}
